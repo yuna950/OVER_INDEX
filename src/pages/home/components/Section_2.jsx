@@ -1,13 +1,13 @@
 import { MdOutlineArrowOutward } from "react-icons/md";
 
-export default function Section_2() {
+export default function Section_2({ position }) {
   return (
     <div className="py-25 flex flex-col gap-12.5">
       <div className="w-full flex justify-center items-center gap-2.5">
-        <div className="w-5 h-5 bg-gray-400">
-          <img src="#" alt="" />
+        <div className="w-5 h-5">
+          <img src={position?.icon} alt={position?.key} />
         </div>
-        <h3 className="text-2xl font-bold">포지션</h3>
+        <h3 className="text-2xl font-bold">{position?.name}</h3>
       </div>
 
       <div className="w-fit h-fit px-5 py-5 flex flex-col items-center gap-5 border border-[#1FB8FF]/25 rounded-[20px]">

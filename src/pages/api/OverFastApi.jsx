@@ -1,33 +1,38 @@
 const BASE_URL = "https://overfast-api.tekrop.fr";
 
-// 포지션
-export const getRoles = async () => {
-  const response = await fetch(`${BASE_URL}/roles?locale=ko-kr`);
+const fetchOverFast = async (endpoint) => {
+  const response = await fetch(`${BASE_URL}${endpoint}?locale=ko-kr`);
 
   if (!response.ok) {
-    throw new Error("포지션 데이터를 불러오지 못했습니다.");
+    throw new Error("데이터를 불러오지 못했습니다.");
   }
 
   return response.json();
+};
+
+// 포지션
+export const getPosition = () => {
+  return fetchOverFast("/roles");
 };
 
 // 영웅
-export const getHeroes = async () => {
-  const response = await fetch(`${BASE_URL}/heroes?locale=ko-kr`);
-
-  if (!response.ok) {
-    throw new Error("영웅 데이터를 불러오지 못했습니다.");
-  }
-
-  return response.json();
+export const getHeroes = () => {
+  return fetchOverFast("/heroes");
 };
 
 // 영웅 상세정보
-export const getHeroDetail = async (heroKey) => {
-  const response = await fetch(`${BASE_URL}/heroes/${heroKey}?locale=ko-kr`);
+export const getHeroDetail = (heroKey) => {
+  return fetchOverFast(`/heroes/${heroKey}`);
+};
+
+// 픽률
+export const getHeroState = async () => {
+  const state = await fetch(
+    `${BASE_URL}/heros/state?platform=pc&gamemode=quickplay&region=asia&order_by=hero%3Aasc`,
+  );
 
   if (!response.ok) {
-    throw new Error("영웅 상세 정보를 불러오지 못했습니다.");
+    throw new Error("영웅 통계 데이터를 불러오지 못했습니다.");
   }
 
   return response.json();

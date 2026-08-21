@@ -1,7 +1,24 @@
+import { useEffect, useState } from "react";
 import Section_1 from "./components/Section_1";
 import Section_2 from "./components/Section_2";
+import { getHeroes, getHeroState, getPosition } from "../api/OverFastApi";
 
 export default function Home() {
+  const [positionData, setPositionData] = useState();
+  const [stateData, setStateData] = useState();
+
+  useEffect(() => {
+    (async () => {
+      // 포지션
+      const positions = await getPosition();
+      setPositionData(positions);
+
+      // 픽률
+      const states = await getHeroState();
+      setStateData(stateData);
+    })();
+  }, []);
+
   return (
     <div>
       <Section_1 />
@@ -13,7 +30,9 @@ export default function Home() {
           <p className="text-[#FA9C1D]">일반게임 픽률 TOP5</p>
         </div>
 
-        <Section_2 />
+        <Section_2 position={positionData?.[0]} />
+        <Section_2 position={positionData?.[1]} />
+        <Section_2 position={positionData?.[2]} />
       </div>
     </div>
   );
