@@ -25,17 +25,21 @@ export const getHeroDetail = (heroKey) => {
   return fetchOverFast(`/heroes/${heroKey}`);
 };
 
-// 픽률
-export const getHeroState = async () => {
-  const state = await fetch(
-    `${BASE_URL}/heros/state?platform=pc&gamemode=quickplay&region=asia&order_by=hero%3Aasc`,
+const fetchStats = async (endpoint) => {
+  const response = await fetch(
+    `${BASE_URL}${endpoint}?platform=pc&gamemode=quickplay&region=asia&order_by=hero:asc`,
   );
 
   if (!response.ok) {
-    throw new Error("영웅 통계 데이터를 불러오지 못했습니다.");
+    throw new Error("데이터를 불러오지 못했습니다.");
   }
 
   return response.json();
+};
+
+// 픽률
+export const getHeroStats = async () => {
+  return fetchStats(`/heroes/stats`);
 };
 
 // 맵
