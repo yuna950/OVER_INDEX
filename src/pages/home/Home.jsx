@@ -2,8 +2,10 @@ import { useEffect, useState } from "react";
 import Section_1 from "./components/Section_1";
 import Section_2 from "./components/Section_2";
 import { getHeroes, getHeroStats, getPosition } from "../api/OverFastApi";
+import { useScrollTop } from "../../lib/useScrollTop";
 
 export default function Home() {
+  useScrollTop();
   const [positionData, setPositionData] = useState();
   const [statsData, setStatsData] = useState();
   const [heroData, setHeroData] = useState();
@@ -25,7 +27,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div>
+    <div className="relative overflow-hidden">
       <Section_1 />
 
       <div className="px-5 lg:px-10 xl:px-62.5 py-25">
@@ -37,6 +39,18 @@ export default function Home() {
           <p className="text-[#FA9C1D] lg:text-[16px] xl:text-[18px] ">
             일반게임 픽률 TOP5
           </p>
+        </div>
+
+        {/* 돌격영웅 */}
+        <div
+          className="absolute 
+        w-75 top-185 -left-25 
+        lg:w-165 lg:top-195 lg:-left-50
+        xl:w-200 xl:top-230 xl:-left-60.5 
+        opacity-30  "
+        >
+          <img src="/tank.png" alt="tank_hero" />
+          <div className="absolute bottom-0 left-0 w-full h-[70%] bg-linear-to-t from-[#060a14] to-transparent" />
         </div>
 
         {/* 돌격 */}
@@ -55,6 +69,18 @@ export default function Home() {
           color={"#1FB8FF"}
         />
 
+        {/* 공격영웅 */}
+        <div
+          className="absolute 
+        w-95 top-330 -right-30 
+        lg:w-165 lg:top-350 lg:-right-50
+        xl:w-200 xl:top-400 xl:-right-60.5 
+        opacity-30 "
+        >
+          <img src="/damage.png" alt="tank_hero" />
+          <div className="absolute bottom-0 left-0 w-full h-[70%] bg-linear-to-t from-[#060a14] to-transparent" />
+        </div>
+
         {/* 공격 */}
         <div className="pt-25 mb-12.5 w-full flex justify-center items-center gap-2.5">
           <div className="w-5 lg:w-6 xl:w-7.5">
@@ -70,6 +96,18 @@ export default function Home() {
           heroes={heroData}
           color={"#E53935"}
         />
+
+        {/* 지원영웅 */}
+        <div
+          className="absolute 
+        w-180 top-470 -left-65
+        lg:w-200 lg:top-510 lg:-left-40
+        xl:w-220 xl:top-570 xl:-left-30 
+        opacity-30"
+        >
+          <img src="/support.png" alt="tank_hero" />
+          <div className="absolute bottom-0 left-0 w-full h-[70%] bg-linear-to-t from-[#060a14] to-transparent" />
+        </div>
 
         {/* 지원 */}
         <div className="pt-25 mb-12.5 w-full flex justify-center items-center gap-2.5">

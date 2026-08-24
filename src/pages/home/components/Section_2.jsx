@@ -42,10 +42,16 @@ export default function Section_2({ position, stats, heroes, color }) {
     .sort((a, b) => b.pickrate - a.pickrate)
     .slice(0, 5);
 
+  const roleColors = {
+    tank: "#1FB8FF",
+    damage: "#E53935",
+    support: "#4CAF7A",
+  };
+
   return (
-    <div className="pb-25 flex flex-col gap-12.5">
+    <div className="pb-25 has-autofill: flex flex-col gap-12.5">
       <Swiper
-        className="w-full"
+        className="w-full h-full overflow-visible"
         spaceBetween={10}
         slidesPerView={2.5}
         breakpoints={{
@@ -55,45 +61,60 @@ export default function Section_2({ position, stats, heroes, color }) {
           },
           1024: {
             slidesPerView: 5,
-            spaceBetween: 20,
+            spaceBetween: 10,
           },
         }}
       >
-        {top5Heroes?.map((hero) => (
-          <SwiperSlide key={hero.key}>
-            <Link to={`/hero/${hero.key}`}>
-              <div
-                className="w-fit h-fit px-5 py-5 lg:px-7.5 lg:py-7.5 flex flex-col items-center gap-5 lg:gap-6 border  rounded-[20px]"
-                style={{
-                  borderColor: `${color}25`,
-                }}
-              >
-                <div className="flex flex-col gap-2.5 items-center">
-                  <div className="w-25 h-25 lg:w-40 lg:h-40 rounded-[50%] overflow-hidden bg-gray-400">
-                    <img src={hero.portrait} alt={hero.key} />
-                  </div>
-                  <p className="font-semibold lg:text-2xl">{hero.name}</p>
-                </div>
+        {top5Heroes?.map((hero) => {
+          const color = roleColors[hero?.role];
 
+          return (
+            <SwiperSlide key={hero.key}>
+              <Link to={`/hero/${hero.key}`}>
                 <div
-                  className="w-fit px-3 py-1 rounded-2xl border  text-[12px] flex items-center justify-center"
+                  className="w-full h-fit px-5 py-5 lg:px-7.5 lg:py-7.5 flex flex-col items-center gap-5 lg:gap-6 border rounded-[20px] transition"
                   style={{
-                    color: `${color}`,
-                    borderColor: `${color}`,
+                    borderColor: `${color}25`,
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.borderColor = `${color}25`;
+                    e.currentTarget.style.boxShadow = `0 0 15px ${color}`;
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.borderColor = `${color}25`;
+                    e.currentTarget.style.boxShadow = "none";
                   }}
                 >
-                  <span>{hero.subrole}</span>
+                  <div className="flex flex-col gap-2.5 items-center">
+                    <div className="w-full  rounded-[50%] overflow-hidden bg-gray-400">
+                      <img src={hero.portrait} alt={hero.key} />
+                    </div>
+                    <p className="font-semibold lg:text-2xl">{hero.name}</p>
+                  </div>
+
+                  <div
+                    className="w-fit px-3 py-1 rounded-2xl border text-[12px] text-[${color}] flex items-center justify-center"
+                    style={{
+                      borderColor: `${color}`,
+                      color,
+                    }}
+                  >
+                    <span>{hero.subrole}</span>
+                  </div>
                 </div>
-              </div>
-            </Link>
-          </SwiperSlide>
-        ))}
+              </Link>
+            </SwiperSlide>
+          );
+        })}
       </Swiper>
 
       <Link to={`/hero/role/${position.key}`}>
-        <div className="m-auto w-fit flex gap-2.5 items-center px-4 py-2 rounded-3xl border border-[#E5E7EB] opacity-50 hover:opacity-100 transition cursor-pointer">
-          <p className="text-[12px] lg:text-[16px] text-[#E5E7EB]">전체보기</p>
-          <MdOutlineArrowOutward size={15} color="#E5E7EB" />
+        <div
+          className={`m-auto w-fit flex gap-2.5 items-center px-4 py-2 rounded-3xl border border-[#E5E7EB] text-[#E5E7EB] hover:border-[${color}] hover:text-[${color}]  transition cursor-pointer`}
+        >
+          <p className={`text-[12px] lg:text-[16px]`}>전체보기</p>
+
+          <MdOutlineArrowOutward size={15} />
         </div>
       </Link>
     </div>

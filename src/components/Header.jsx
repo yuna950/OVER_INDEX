@@ -9,12 +9,12 @@ export default function Header() {
         </Link>
       </div>
 
-      <ul className="flex gap-5 lg:gap-12.5 text-[14px] lg:text-lg  font-medium lg:font-semibold">
+      <ul className="flex gap-10 lg:gap-12.5 text-[16px] lg:text-lg lg:font-semibold">
         <li className="cursor-pointer">
-          <Link to={"/hero"}>영웅</Link>
+          <Link to={"/hero"}>HERO</Link>
         </li>
         <li className="cursor-pointer">
-          <Link to={"/map"}>맵</Link>
+          <Link to={"/map"}>MAP</Link>
         </li>
       </ul>
     </header>
