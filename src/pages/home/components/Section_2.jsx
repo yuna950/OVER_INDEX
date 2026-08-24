@@ -51,7 +51,7 @@ export default function Section_2({ position, stats, heroes, color }) {
   return (
     <div className="pb-25 has-autofill: flex flex-col gap-12.5">
       <Swiper
-        className="w-full h-full overflow-visible"
+        className="w-full h-full !overflow-visible"
         spaceBetween={10}
         slidesPerView={2.5}
         breakpoints={{
