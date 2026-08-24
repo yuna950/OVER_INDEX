@@ -42,8 +42,6 @@ export default function Section_2({ position, stats, heroes, color }) {
     .sort((a, b) => b.pickrate - a.pickrate)
     .slice(0, 5);
 
-  console.log(top5Heroes?.length);
-
   return (
     <div className="pb-25 flex flex-col gap-12.5">
       <Swiper
@@ -67,7 +65,7 @@ export default function Section_2({ position, stats, heroes, color }) {
               <div
                 className="w-fit h-fit px-5 py-5 lg:px-7.5 lg:py-7.5 flex flex-col items-center gap-5 lg:gap-6 border  rounded-[20px]"
                 style={{
-                  borderColor: `${color}40`,
+                  borderColor: `${color}25`,
                 }}
               >
                 <div className="flex flex-col gap-2.5 items-center">
@@ -92,10 +90,12 @@ export default function Section_2({ position, stats, heroes, color }) {
         ))}
       </Swiper>
 
-      <div className="m-auto w-fit flex gap-2.5 items-center px-4 py-2 rounded-3xl border border-[#E5E7EB] opacity-50 hover:opacity-100 transition cursor-pointer">
-        <p className="text-[12px] lg:text-[16px] text-[#E5E7EB]">전체보기</p>
-        <MdOutlineArrowOutward size={15} color="#E5E7EB" />
-      </div>
+      <Link to={`/hero/role/${position.key}`}>
+        <div className="m-auto w-fit flex gap-2.5 items-center px-4 py-2 rounded-3xl border border-[#E5E7EB] opacity-50 hover:opacity-100 transition cursor-pointer">
+          <p className="text-[12px] lg:text-[16px] text-[#E5E7EB]">전체보기</p>
+          <MdOutlineArrowOutward size={15} color="#E5E7EB" />
+        </div>
+      </Link>
     </div>
   );
 }

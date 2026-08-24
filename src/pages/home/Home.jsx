@@ -31,7 +31,7 @@ export default function Home() {
       <div className="px-5 lg:px-10 xl:px-62.5 py-25">
         {/* 타이틀 */}
         <div className="flex justify-center items-center flex-col">
-          <h2 className="text-3xl lg:text-[45px] text-[55px] font-bold">
+          <h2 className="text-3xl lg:text-[45px] xl:text-[55px] font-bold">
             추천 영웅
           </h2>
           <p className="text-[#FA9C1D] lg:text-[16px] xl:text-[18px] ">
