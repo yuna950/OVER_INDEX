@@ -1,7 +1,11 @@
 import { useEffect, useState } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import Loading from "../../../components/Loading";
 
 export default function Section_2({ detail }) {
   const [selectedSkill, setSelectedSkill] = useState(null);
+  const [isVideoLoading, setIsVideoLoading] = useState(true);
 
   const abilities = detail?.abilities ?? [];
 
@@ -16,37 +20,54 @@ export default function Section_2({ detail }) {
     <div className="w-full py-25 flex flex-col gap-7.5 justify-center items-center">
       <h2 className="text-2xl font-bold">스킬</h2>
 
-      {/* 스킬 아이콘 */}
-      <div className="flex gap-5">
-        {abilities.map((skill) => (
-          <button
-            type="button"
-            key={skill.name}
-            onClick={() => setSelectedSkill(skill)}
-            className={`
-              w-15
-              flex justify-center items-center
-              p-2.5
-              rounded-full
-              border
-              transition
-              cursor-pointer
-              ${
-                selectedSkill?.name === skill.name
-                  ? "border-[#FA9C1D] opacity-100"
-                  : "border-transparent opacity-25 hover:border-[#FA9C1D] hover:opacity-100"
-              }
-            `}
-          >
-            <img src={skill.icon} alt={skill.name} className="w-full" />
-          </button>
-        ))}
+      <div className="w-full h-full py-5 px-5 overflow-hidden">
+        <Swiper
+          className="w-full h-full overflow-visible!"
+          slidesPerView={4.8}
+          spaceBetween={20}
+        >
+          {/* 스킬 아이콘 */}
+          {abilities.map((skill) => (
+            <SwiperSlide key={skill.name}>
+              <button
+                type="button"
+                onClick={() => {
+                  setSelectedSkill(skill);
+                  setIsVideoLoading(true);
+                }}
+                className={`
+                  w-15 
+                  h-15 
+                  flex justify-center items-center 
+                  p-2.5 
+                  rounded-full 
+                  border 
+                  transition 
+                  cursor-pointer 
+                  ${
+                    selectedSkill?.name === skill.name
+                      ? "border-[#FA9C1D] opacity-100 shadow-[0_0_20px_rgba(250,156,29,1)]"
+                      : "border-transparent opacity-25 hover:border-[#FA9C1D] hover:opacity-100"
+                  }
+                `}
+              >
+                <img src={skill.icon} alt={skill.name} className="w-full" />
+              </button>
+            </SwiperSlide>
+          ))}
+        </Swiper>
       </div>
 
       {/* 선택한 스킬 영상 */}
       {selectedSkill?.video && (
         <div>
-          <div className=" w-full">
+          <div className="relative w-full aspect-video">
+            {isVideoLoading && (
+              <div className="absolute inset-0 flex items-center justify-center">
+                <Loading />
+              </div>
+            )}
+
             <video
               key={selectedSkill.name}
               autoPlay
@@ -54,7 +75,10 @@ export default function Section_2({ detail }) {
               loop
               playsInline
               poster={selectedSkill.video.thumbnail}
-              className="w-full "
+              onCanPlay={() => setIsVideoLoading(false)}
+              className={`w-full h-full transition-opacity duration-300 ${
+                isVideoLoading ? "opacity-0" : "opacity-100"
+              }`}
             >
               <source src={selectedSkill.video.link.webm} type="video/webm" />
 

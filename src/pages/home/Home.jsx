@@ -3,28 +3,40 @@ import Section_1 from "./components/Section_1";
 import Section_2 from "./components/Section_2";
 import { getHeroes, getHeroStats, getPosition } from "../api/OverFastApi";
 import { useScrollTop } from "../../lib/useScrollTop";
+import Loading from "../../components/Loading";
 
 export default function Home() {
   useScrollTop();
   const [positionData, setPositionData] = useState();
   const [statsData, setStatsData] = useState();
   const [heroData, setHeroData] = useState();
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    (async () => {
-      // 포지션
-      const positions = await getPosition();
-      setPositionData(positions);
+    try {
+      (async () => {
+        // 포지션
+        const positions = await getPosition();
+        setPositionData(positions);
 
-      // 영웅
-      const heros = await getHeroes();
-      setHeroData(heros);
+        // 영웅
+        const heros = await getHeroes();
+        setHeroData(heros);
 
-      // 픽률
-      const stats = await getHeroStats();
-      setStatsData(stats);
-    })();
+        // 픽률
+        const stats = await getHeroStats();
+        setStatsData(stats);
+      })();
+    } catch (error) {
+      console.log(error);
+    } finally {
+      setLoading(false);
+    }
   }, []);
+
+  if (loading) {
+    return <Loading />;
+  }
 
   return (
     <div className="relative overflow-hidden">
