@@ -1,26 +1,8 @@
 import { Link, useParams } from "react-router-dom";
+import { roleColors, subroleNames } from "../../../lib/hero";
 
 export default function Section_1({ position, heroes }) {
   const { role } = useParams();
-
-  const subroleNames = {
-    tactician: "전술가",
-    flanker: "측면공격가",
-    sharpshooter: "명사수",
-    specialist: "전문가",
-    survivor: "생존왕",
-    stalwart: "강건한 자",
-    initiator: "개시자",
-    recon: "수색가",
-    medic: "의무관",
-    bruiser: "투사",
-  };
-
-  const roleColors = {
-    tank: "#1FB8FF",
-    damage: "#E53935",
-    support: "#4CAF7A",
-  };
 
   const positionHeroes = role
     ? heroes?.filter((hero) => hero.role === role)

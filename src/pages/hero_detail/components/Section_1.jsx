@@ -1,34 +1,10 @@
 import { FaHeart } from "react-icons/fa";
+import { roleColors, roleName, subroleNames } from "../../../lib/hero";
 
 export default function Section_1({ detail }) {
   const heart = detail?.hitpoints?.health;
   const armor = detail?.hitpoints?.armor;
   const shields = detail?.hitpoints?.shields;
-
-  const subroleNames = {
-    tactician: "전술가",
-    flanker: "측면공격가",
-    sharpshooter: "명사수",
-    specialist: "전문가",
-    survivor: "생존왕",
-    stalwart: "강건한 자",
-    initiator: "개시자",
-    recon: "수색가",
-    medic: "의무관",
-    bruiser: "투사",
-  };
-
-  const roleName = {
-    tank: "돌격",
-    damage: "공격",
-    support: "지원",
-  };
-
-  const roleColors = {
-    tank: "#1FB8FF",
-    damage: "#E53935",
-    support: "#4CAF7A",
-  };
 
   return (
     <div className="w-full h-100 relative">

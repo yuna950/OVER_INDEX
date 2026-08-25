@@ -6,6 +6,8 @@ import Section_2 from "./components/Section_2";
 import { useScrollTop } from "../../lib/useScrollTop";
 import Section_3 from "./components/Section_3";
 import Loading from "../../components/Loading";
+import { heroes } from "../../lib/heroes";
+import Section_4 from "./components/Section_4";
 
 export default function HeroDetail() {
   useScrollTop();
@@ -13,25 +15,25 @@ export default function HeroDetail() {
   const [loading, setLoading] = useState(true);
 
   const { key } = useParams();
+  const hero = heroes[key];
 
   useEffect(() => {
-    try {
-      (async () => {
+    (async () => {
+      try {
         const details = await getHeroDetail(key);
         setDetailData(details);
-      })();
-    } catch (error) {
-      console.log(error);
-    } finally {
-      setLoading(false);
-    }
+      } catch (error) {
+        console.log(error);
+      } finally {
+        setLoading(false);
+      }
+    })();
   }, [key]);
 
   if (loading) {
     return <Loading />;
   }
 
-  console.log(detailData);
   const perks = detailData?.perks;
 
   return (
@@ -40,7 +42,11 @@ export default function HeroDetail() {
 
       <div className="px-5 lg:px-10 xl:px-62.5">
         <Section_2 detail={detailData} />
+        <div className="w-[1px] h-[120px] bg-white/10 m-auto"></div>
         <Section_3 detail={perks} />
+        <div className="w-[1px] h-[120px] bg-white/10 m-auto mb-[50px]"></div>
+        <Section_4 data={hero?.best_synergies} title={"시너지 영웅"} />
+        <Section_4 data={hero?.countered_by} title={"카운터 영웅"} />
       </div>
     </div>
   );

@@ -2,6 +2,7 @@ import { MdOutlineArrowOutward } from "react-icons/md";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import { Link } from "react-router-dom";
+import { roleColors, subroleNames } from "../../../lib/hero";
 
 export default function Section_2({ position, stats, heroes, color }) {
   if (!position || !stats || !heroes) return null;
@@ -14,19 +15,6 @@ export default function Section_2({ position, stats, heroes, color }) {
 
   // 해당 포지션 영웅들의 stats만 추출
   const positionStats = stats?.filter((stat) => heroKeys.includes(stat.hero));
-
-  const subroleNames = {
-    tactician: "전술가",
-    flanker: "측면공격가",
-    sharpshooter: "명사수",
-    specialist: "전문가",
-    survivor: "생존왕",
-    stalwart: "강건한 자",
-    initiator: "개시자",
-    recon: "수색가",
-    medic: "의무관",
-    bruiser: "투사",
-  };
 
   // stats + heroes 데이터 합치기 → 픽률 높은 순 TOP5
   const top5Heroes = positionStats
@@ -41,12 +29,6 @@ export default function Section_2({ position, stats, heroes, color }) {
     })
     .sort((a, b) => b.pickrate - a.pickrate)
     .slice(0, 5);
-
-  const roleColors = {
-    tank: "#1FB8FF",
-    damage: "#E53935",
-    support: "#4CAF7A",
-  };
 
   return (
     <div className="pb-25 has-autofill: flex flex-col gap-12.5">

@@ -1,0 +1,3793 @@
+export const heroes = {
+  ana: {
+    name: "ana",
+    description:
+      "High-skill hitscan support who can single-handedly dictate the flow of a fight. Her Biotic Grenade denies enemy healing or amplifies her own team's recovery at a critical moment, and her Nano Boost ultimate can turn heroes like Genji or Reinhardt into unstoppable forces. Requires good aim to get the most out of her kit.",
+    general_rol: "Support",
+    secondary_rol: "Tactician",
+    shields: 0,
+    health: 250,
+    armor: 0,
+    on_rotation: true,
+    nicks: ["Ana", "Amari", "Sniper", "Granny", "Grandma", "Grandmother"],
+    counters: [
+      {
+        name: "shion",
+        score: 10,
+      },
+      {
+        name: "orisa",
+        score: 10,
+      },
+      {
+        name: "wuyang",
+        score: 10,
+      },
+    ],
+    countered_by: [
+      {
+        name: "sombra",
+        score: 10,
+      },
+      {
+        name: "zarya",
+        score: 10,
+      },
+      {
+        name: "mauga",
+        score: 10,
+      },
+    ],
+    best_synergies: [
+      {
+        name: "widowmaker",
+        score: 20,
+      },
+      {
+        name: "genji",
+        score: 20,
+      },
+      {
+        name: "pharah",
+        score: 20,
+      },
+    ],
+    worst_synergies: [
+      {
+        name: "vendetta",
+        score: -10,
+      },
+      {
+        name: "lucio",
+        score: 0,
+      },
+      {
+        name: "wuyang",
+        score: 0,
+      },
+    ],
+    best_maps: ["King's Row", "Rialto", "Havana"],
+    worst_maps: ["New Junk City", "Suravasa", "Oasis"],
+  },
+  anran: {
+    name: "anran",
+    description:
+      "High-mobility fire-wielding flanker whose Ignition passive burns enemies for damage over time, amplified by her Fan the Flames secondary fire. Her Dancing Blaze dashes grant brief invulnerability and backline access. Her dual-form ultimate either launches her into a devastating explosion or revives her from death in a burst of flames.",
+    general_rol: "Damage",
+    secondary_rol: "Flanker",
+    shields: 0,
+    health: 250,
+    armor: 0,
+    on_rotation: true,
+    nicks: ["Anran", "Fire", "Flame", "Older Sister", "Sister"],
+    counters: [
+      {
+        name: "winston",
+        score: 20,
+      },
+      {
+        name: "wrecking-ball",
+        score: 20,
+      },
+      {
+        name: "mizuki",
+        score: 10,
+      },
+    ],
+    countered_by: [
+      {
+        name: "pharah",
+        score: 20,
+      },
+      {
+        name: "doomfist",
+        score: 20,
+      },
+      {
+        name: "junkrat",
+        score: 10,
+      },
+    ],
+    best_synergies: [
+      {
+        name: "winston",
+        score: 10,
+      },
+      {
+        name: "mizuki",
+        score: 10,
+      },
+      {
+        name: "junker-queen",
+        score: 10,
+      },
+    ],
+    worst_synergies: [
+      {
+        name: "soldier-76",
+        score: -20,
+      },
+      {
+        name: "domina",
+        score: -20,
+      },
+      {
+        name: "sierra",
+        score: -20,
+      },
+    ],
+    best_maps: ["Aatlis", "Colosseo", "New Queen Street"],
+    worst_maps: ["Blizzard World", "Circuit Royal", "Eichenwalde"],
+  },
+  ashe: {
+    name: "ashe",
+    description:
+      "Mid-to-long-range hitscan DPS with strong terrain control. Her Dynamite is devastating against grouped-up compositions, and chaining it with her rifle multiplies the damage. BOB, her ultimate, is an excellent tool for contesting points, checking dangerous angles, and giving her team breathing room in chaotic fights.",
+    general_rol: "Damage",
+    secondary_rol: "Sharpshooter",
+    shields: 0,
+    health: 250,
+    armor: 0,
+    on_rotation: true,
+    nicks: ["Ashe", "Ash", "Sniper", "BOB", "B.O.B.", "Dynamite"],
+    counters: [
+      {
+        name: "junkrat",
+        score: 20,
+      },
+      {
+        name: "brigitte",
+        score: 20,
+      },
+      {
+        name: "mauga",
+        score: 20,
+      },
+    ],
+    countered_by: [
+      {
+        name: "venture",
+        score: 20,
+      },
+      {
+        name: "hazard",
+        score: 10,
+      },
+      {
+        name: "wrecking-ball",
+        score: 10,
+      },
+    ],
+    best_synergies: [
+      {
+        name: "junkrat",
+        score: 20,
+      },
+      {
+        name: "ramattra",
+        score: 20,
+      },
+      {
+        name: "dmon",
+        score: 20,
+      },
+    ],
+    worst_synergies: [
+      {
+        name: "sierra",
+        score: -10,
+      },
+      {
+        name: "shion",
+        score: -10,
+      },
+      {
+        name: "echo",
+        score: -10,
+      },
+    ],
+    best_maps: ["Circuit Royal", "Junkertown", "Havana"],
+    worst_maps: ["Lijiang Tower", "Ilios", "Eichenwalde"],
+  },
+  baptiste: {
+    name: "baptiste",
+    description:
+      "Flex support with solid damage and healing output. His Immortality Field grants critical extra seconds of survival during intense fights, and his Amplification Matrix ultimate can double both ally damage and healing in its area, making smart placement and timing essential to get full value.",
+    general_rol: "Support",
+    secondary_rol: "Tactician",
+    shields: 0,
+    health: 250,
+    armor: 0,
+    on_rotation: true,
+    nicks: ["Bap", "Baptiste", "Immortality", "Larry", "Disco", "Mauga"],
+    counters: [
+      {
+        name: "lifeweaver",
+        score: 20,
+      },
+      {
+        name: "vendetta",
+        score: 20,
+      },
+      {
+        name: "junker-queen",
+        score: 20,
+      },
+    ],
+    countered_by: [
+      {
+        name: "illari",
+        score: 20,
+      },
+      {
+        name: "mei",
+        score: 20,
+      },
+      {
+        name: "symmetra",
+        score: 20,
+      },
+    ],
+    best_synergies: [
+      {
+        name: "brigitte",
+        score: 10,
+      },
+      {
+        name: "jetpack-cat",
+        score: 10,
+      },
+      {
+        name: "pharah",
+        score: 10,
+      },
+    ],
+    worst_synergies: [
+      {
+        name: "juno",
+        score: -20,
+      },
+      {
+        name: "freja",
+        score: -20,
+      },
+      {
+        name: "echo",
+        score: -10,
+      },
+    ],
+    best_maps: ["King's Row", "Watchpoint: Gibraltar", "Numbani"],
+    worst_maps: ["Suravasa", "Colosseo", "Eichenwalde"],
+  },
+  bastion: {
+    name: "bastion",
+    description:
+      "Despite his multiple configurations, Bastion is not a particularly flexible hero. His Assault form dishes out devastating area damage, but outside of it he can be vulnerable. His grenade offers an interesting form of mobility and his ultimate requires solid planning to land effectively. In the right hands, he can be a truly destructive force against the enemy team.",
+    general_rol: "Damage",
+    secondary_rol: "Specialist",
+    shields: 0,
+    health: 250,
+    armor: 100,
+    on_rotation: true,
+    nicks: ["Bastion", "Robot", "Bot"],
+    counters: [
+      {
+        name: "junkrat",
+        score: 20,
+      },
+      {
+        name: "widowmaker",
+        score: 20,
+      },
+      {
+        name: "sigma",
+        score: 10,
+      },
+    ],
+    countered_by: [
+      {
+        name: "domina",
+        score: 20,
+      },
+      {
+        name: "mizuki",
+        score: 20,
+      },
+      {
+        name: "wuyang",
+        score: 20,
+      },
+    ],
+    best_synergies: [
+      {
+        name: "doomfist",
+        score: 20,
+      },
+      {
+        name: "sigma",
+        score: 20,
+      },
+      {
+        name: "lifeweaver",
+        score: 20,
+      },
+    ],
+    worst_synergies: [
+      {
+        name: "tracer",
+        score: -20,
+      },
+      {
+        name: "freja",
+        score: -10,
+      },
+      {
+        name: "vendetta",
+        score: -10,
+      },
+    ],
+    best_maps: ["Neon Junction", "King's Row", "Circuit Royal"],
+    worst_maps: ["Aatlis", "Suravasa", "Colosseo"],
+  },
+  brigitte: {
+    name: "brigitte",
+    description:
+      "Although her kit suggests Brigitte should be played on the front lines, she performs best from a defensive, advantageous position. Her range healing, shield, and bash make the enemy backline extremely difficult to kill. Her Rally ultimate rewards patient players who wait for the right moment to commit to the fight.",
+    general_rol: "Support",
+    secondary_rol: "Survivor",
+    shields: 0,
+    health: 200,
+    armor: 50,
+    on_rotation: true,
+    nicks: ["Brig", "Brigitte", "4Gitte", "Lindholm"],
+    counters: [
+      {
+        name: "lifeweaver",
+        score: 20,
+      },
+      {
+        name: "illari",
+        score: 20,
+      },
+      {
+        name: "mercy",
+        score: 10,
+      },
+    ],
+    countered_by: [
+      {
+        name: "hanzo",
+        score: 20,
+      },
+      {
+        name: "zarya",
+        score: 20,
+      },
+      {
+        name: "vendetta",
+        score: 20,
+      },
+    ],
+    best_synergies: [
+      {
+        name: "baptiste",
+        score: 10,
+      },
+      {
+        name: "wrecking-ball",
+        score: 10,
+      },
+      {
+        name: "dva",
+        score: 0,
+      },
+    ],
+    worst_synergies: [
+      {
+        name: "zenyatta",
+        score: -20,
+      },
+      {
+        name: "zarya",
+        score: -20,
+      },
+      {
+        name: "shion",
+        score: -20,
+      },
+    ],
+    best_maps: ["Nepal", "Esperança", "Aatlis"],
+    worst_maps: ["Circuit Royal", "Eichenwalde", "Blizzard World"],
+  },
+  cassidy: {
+    name: "cassidy",
+    description:
+      "Close-to-mid-range hitscan effective at pressuring aggressive tanks and flankers alike. His Magnetic Grenade can force crucial cooldowns at the right moment, and his Deadeye ultimate allows him to dominate open areas of the map, threatening any enemy caught in his line of sight.",
+    general_rol: "Damage",
+    secondary_rol: "Sharpshooter",
+    shields: 0,
+    health: 250,
+    armor: 0,
+    on_rotation: true,
+    nicks: ["Cass", "Cassidy", "Mcree", "Mccre", "Cowboy", "Jesse"],
+    counters: [
+      {
+        name: "baptiste",
+        score: 10,
+      },
+      {
+        name: "mei",
+        score: 10,
+      },
+      {
+        name: "vendetta",
+        score: 10,
+      },
+    ],
+    countered_by: [
+      {
+        name: "pharah",
+        score: 20,
+      },
+      {
+        name: "sombra",
+        score: 20,
+      },
+      {
+        name: "zarya",
+        score: 20,
+      },
+    ],
+    best_synergies: [
+      {
+        name: "lifeweaver",
+        score: 20,
+      },
+      {
+        name: "hazard",
+        score: 20,
+      },
+      {
+        name: "juno",
+        score: 20,
+      },
+    ],
+    worst_synergies: [
+      {
+        name: "vendetta",
+        score: -10,
+      },
+      {
+        name: "dmon",
+        score: 0,
+      },
+      {
+        name: "echo",
+        score: 0,
+      },
+    ],
+    best_maps: ["Antarctic Peninsula", "Oasis", "Busan"],
+    worst_maps: ["King's Row", "Rialto", "Eichenwalde"],
+  },
+  dva: {
+    name: "dva",
+    description:
+      "A frequently misunderstood tank who excels at assassinating enemy backlines, but is equally capable of defending her own. Especially effective on maps with multiple high grounds. Her Defense Matrix can deny critical ultimates like Zarya's Graviton, and her Self-Destruct is particularly powerful against teams with few shields.",
+    general_rol: "Tank",
+    secondary_rol: "Initiator",
+    shields: 0,
+    health: 325,
+    armor: 325,
+    on_rotation: true,
+    nicks: ["D.Va", "DVa", "Mecha", "Tokki", "Hana"],
+    counters: [
+      {
+        name: "shion",
+        score: 20,
+      },
+      {
+        name: "orisa",
+        score: 20,
+      },
+      {
+        name: "pharah",
+        score: 20,
+      },
+    ],
+    countered_by: [
+      {
+        name: "widowmaker",
+        score: 20,
+      },
+      {
+        name: "zarya",
+        score: 10,
+      },
+      {
+        name: "sombra",
+        score: 10,
+      },
+    ],
+    best_synergies: [
+      {
+        name: "echo",
+        score: 20,
+      },
+      {
+        name: "brigitte",
+        score: 20,
+      },
+      {
+        name: "hanzo",
+        score: 20,
+      },
+    ],
+    worst_synergies: [
+      {
+        name: "reinhardt",
+        score: -10,
+      },
+      {
+        name: "sigma",
+        score: -10,
+      },
+      {
+        name: "hazard",
+        score: -10,
+      },
+    ],
+    best_maps: ["Numbani", "Paraíso", "Watchpoint: Gibraltar"],
+    worst_maps: ["Nepal", "Eichenwalde", "Neon Junction"],
+  },
+  dmon: {
+    name: "dmon",
+    description: "",
+    general_rol: "Tank",
+    secondary_rol: "Stalwart",
+    shields: 0,
+    health: 425,
+    armor: 325,
+    on_rotation: true,
+    nicks: ["D.Mon", "DMon", "Mecha", "Meka", "Demon", "Yuna", "Beast"],
+    counters: [
+      {
+        name: "mercy",
+        score: 20,
+      },
+      {
+        name: "hanzo",
+        score: 20,
+      },
+      {
+        name: "junkrat",
+        score: 10,
+      },
+    ],
+    countered_by: [
+      {
+        name: "lifeweaver",
+        score: 20,
+      },
+      {
+        name: "emre",
+        score: 20,
+      },
+      {
+        name: "cassidy",
+        score: 0,
+      },
+    ],
+    best_synergies: [
+      {
+        name: "shion",
+        score: 10,
+      },
+      {
+        name: "kiriko",
+        score: 0,
+      },
+      {
+        name: "hanzo",
+        score: 0,
+      },
+    ],
+    worst_synergies: [
+      {
+        name: "ashe",
+        score: -20,
+      },
+      {
+        name: "ana",
+        score: -20,
+      },
+      {
+        name: "junkrat",
+        score: -20,
+      },
+    ],
+    best_maps: ["Aatlis", "New Junk City", "Runasapi"],
+    worst_maps: ["Blizzard World", "King's Row", "Rialto"],
+  },
+  domina: {
+    name: "domina",
+    description:
+      "Long-range poke tank and Vishkar heiress. Her segmented Barrier Array must be destroyed panel by panel, and her Crystal Charge projectile pierces barriers and can be manually detonated. Her Reconstruction passive restores shields on ability damage. Her Panopticon ultimate traps enemies in a hard-light dome that detonates after a short duration, often lethal to low-health supports caught inside.",
+    general_rol: "Tank",
+    secondary_rol: "Stalwart",
+    shields: 400,
+    health: 250,
+    armor: 0,
+    on_rotation: true,
+    nicks: ["Domin", "Domina", "Vishkar", "Vaira", "Shingania"],
+    counters: [
+      {
+        name: "pharah",
+        score: 20,
+      },
+      {
+        name: "bastion",
+        score: 20,
+      },
+      {
+        name: "zarya",
+        score: 20,
+      },
+    ],
+    countered_by: [
+      {
+        name: "zenyatta",
+        score: 20,
+      },
+      {
+        name: "wuyang",
+        score: 20,
+      },
+      {
+        name: "torbjorn",
+        score: 20,
+      },
+    ],
+    best_synergies: [
+      {
+        name: "venture",
+        score: 10,
+      },
+      {
+        name: "pharah",
+        score: 10,
+      },
+      {
+        name: "torbjorn",
+        score: 10,
+      },
+    ],
+    worst_synergies: [
+      {
+        name: "anran",
+        score: -20,
+      },
+      {
+        name: "junker-queen",
+        score: -20,
+      },
+      {
+        name: "jetpack-cat",
+        score: -10,
+      },
+    ],
+    best_maps: ["Havana", "Circuit Royal", "Rialto"],
+    worst_maps: ["Busan", "Colosseo", "Aatlis"],
+  },
+  doomfist: {
+    name: "doomfist",
+    description:
+      "A tank with exceptional aerial mobility that lets him drop on enemy lines from any rooftop. His Rocket Punch is especially punishing on maps with pits to knock enemies into. His Meteor Strike ultimate functions almost like an extra cooldown mid-fight, letting him reposition or refocus his threat rapidly.",
+    general_rol: "Tank",
+    secondary_rol: "Initiator",
+    shields: 0,
+    health: 525,
+    armor: 0,
+    on_rotation: true,
+    nicks: ["Doom", "Doomfist", "Fist", "They Say", "dey say", "deysey"],
+    counters: [
+      {
+        name: "sojourn",
+        score: 20,
+      },
+      {
+        name: "echo",
+        score: 20,
+      },
+      {
+        name: "brigitte",
+        score: 20,
+      },
+    ],
+    countered_by: [
+      {
+        name: "lifeweaver",
+        score: 20,
+      },
+      {
+        name: "shion",
+        score: 10,
+      },
+      {
+        name: "junkrat",
+        score: 10,
+      },
+    ],
+    best_synergies: [
+      {
+        name: "juno",
+        score: 20,
+      },
+      {
+        name: "bastion",
+        score: 10,
+      },
+      {
+        name: "widowmaker",
+        score: 10,
+      },
+    ],
+    worst_synergies: [
+      {
+        name: "sigma",
+        score: -20,
+      },
+      {
+        name: "winston",
+        score: -20,
+      },
+      {
+        name: "wuyang",
+        score: -10,
+      },
+    ],
+    best_maps: ["Suravasa", "Colosseo", "Lijiang Tower"],
+    worst_maps: ["Junkertown", "Eichenwalde", "Busan"],
+  },
+  echo: {
+    name: "echo",
+    description:
+      "Airborne DPS hero with high damage potential. Her Sticky Bombs are effective against heroes who hold static positions, and her Focusing Beam efficiently finishes low-health targets. Her Duplicate ultimate requires extensive knowledge of the entire Overwatch roster to be used to its full potential.",
+    general_rol: "Damage",
+    secondary_rol: "Recon",
+    shields: 75,
+    health: 150,
+    armor: 0,
+    on_rotation: true,
+    nicks: ["Echo", "Moth", "Copy", "Fly"],
+    counters: [
+      {
+        name: "jetpack-cat",
+        score: 20,
+      },
+      {
+        name: "lucio",
+        score: 20,
+      },
+      {
+        name: "sombra",
+        score: 20,
+      },
+    ],
+    countered_by: [
+      {
+        name: "mei",
+        score: 20,
+      },
+      {
+        name: "doomfist",
+        score: 20,
+      },
+      {
+        name: "juno",
+        score: 20,
+      },
+    ],
+    best_synergies: [
+      {
+        name: "illari",
+        score: 10,
+      },
+      {
+        name: "mei",
+        score: 10,
+      },
+      {
+        name: "junkrat",
+        score: 10,
+      },
+    ],
+    worst_synergies: [
+      {
+        name: "genji",
+        score: -20,
+      },
+      {
+        name: "ashe",
+        score: -20,
+      },
+      {
+        name: "cassidy",
+        score: -20,
+      },
+    ],
+    best_maps: ["Dorado", "Watchpoint: Gibraltar", "Paraíso"],
+    worst_maps: ["Midtown", "Neon Junction", "Eichenwalde"],
+  },
+  emre: {
+    name: "emre",
+    description:
+      "Versatile run-and-gun hero equally dangerous at close and mid range. His three-round burst rifle can zoom for longer sightlines, his Cyber Frag grenade bounces around corners, and his Siphon Blaster pistol steals life while boosting his mobility. His Override Protocol ultimate transforms him into a living weapon with explosive rapid fire.",
+    general_rol: "Damage",
+    secondary_rol: "Specialist",
+    shields: 0,
+    health: 250,
+    armor: 0,
+    on_rotation: true,
+    nicks: ["Emre", "Turkish", "Conspiracy", "Sarioglu", "Program"],
+    counters: [
+      {
+        name: "lifeweaver",
+        score: 20,
+      },
+      {
+        name: "dmon",
+        score: 20,
+      },
+      {
+        name: "cassidy",
+        score: 20,
+      },
+    ],
+    countered_by: [
+      {
+        name: "pharah",
+        score: 20,
+      },
+      {
+        name: "freja",
+        score: 10,
+      },
+      {
+        name: "shion",
+        score: 10,
+      },
+    ],
+    best_synergies: [
+      {
+        name: "winston",
+        score: 20,
+      },
+      {
+        name: "mercy",
+        score: 20,
+      },
+      {
+        name: "mauga",
+        score: 10,
+      },
+    ],
+    worst_synergies: [
+      {
+        name: "shion",
+        score: -20,
+      },
+      {
+        name: "freja",
+        score: -10,
+      },
+      {
+        name: "junkrat",
+        score: -10,
+      },
+    ],
+    best_maps: ["Havana", "Circuit Royal", "Junkertown"],
+    worst_maps: ["Lijiang Tower", "Ilios", "Eichenwalde"],
+  },
+  freja: {
+    name: "freja",
+    description:
+      "Mobile recon DPS built around her crossbow and explosive bolt. Take Aim slows her momentum to fire a high-speed shot that can headshot, Quick Dash refreshes it up to three times, and Updraft provides vertical repositioning. Her Bola Shot ultimate snares the first enemy hit and pulls in nearby targets, setting up devastating team follow-ups.",
+    general_rol: "Damage",
+    secondary_rol: "Recon",
+    shields: 0,
+    health: 225,
+    armor: 0,
+    on_rotation: true,
+    nicks: ["Freja", "Hunter", "Redhead"],
+    counters: [
+      {
+        name: "zenyatta",
+        score: 20,
+      },
+      {
+        name: "kiriko",
+        score: 10,
+      },
+      {
+        name: "sojourn",
+        score: 10,
+      },
+    ],
+    countered_by: [
+      {
+        name: "wuyang",
+        score: 20,
+      },
+      {
+        name: "junker-queen",
+        score: 10,
+      },
+      {
+        name: "mauga",
+        score: 10,
+      },
+    ],
+    best_synergies: [
+      {
+        name: "wrecking-ball",
+        score: 10,
+      },
+      {
+        name: "jetpack-cat",
+        score: 10,
+      },
+      {
+        name: "ashe",
+        score: 10,
+      },
+    ],
+    worst_synergies: [
+      {
+        name: "sombra",
+        score: -20,
+      },
+      {
+        name: "bastion",
+        score: -10,
+      },
+      {
+        name: "moira",
+        score: -10,
+      },
+    ],
+    best_maps: ["Paraíso", "Blizzard World", "Route 66"],
+    worst_maps: ["Nepal", "Antarctic Peninsula", "Eichenwalde"],
+  },
+  genji: {
+    name: "genji",
+    description:
+      "Hero with exceptional mobility, most effective on maps with flanking routes and multiple height levels. His Dragonblade ultimate is particularly strong and devastating when paired with a good setup. Depending on how much pressure his shurikens generate mid-fight, he can either function as an ultimate-charging tool or a lethal backline assassin.",
+    general_rol: "Damage",
+    secondary_rol: "Flanker",
+    shields: 0,
+    health: 250,
+    armor: 0,
+    on_rotation: true,
+    nicks: ["Genji", "Ninja", "Naruto", "Hokage"],
+    counters: [
+      {
+        name: "venture",
+        score: 20,
+      },
+      {
+        name: "symmetra",
+        score: 20,
+      },
+      {
+        name: "junker-queen",
+        score: 10,
+      },
+    ],
+    countered_by: [
+      {
+        name: "vendetta",
+        score: 20,
+      },
+      {
+        name: "hazard",
+        score: 10,
+      },
+      {
+        name: "zarya",
+        score: 10,
+      },
+    ],
+    best_synergies: [
+      {
+        name: "shion",
+        score: 20,
+      },
+      {
+        name: "roadhog",
+        score: 20,
+      },
+      {
+        name: "ana",
+        score: 10,
+      },
+    ],
+    worst_synergies: [
+      {
+        name: "echo",
+        score: -10,
+      },
+      {
+        name: "reaper",
+        score: -10,
+      },
+      {
+        name: "venture",
+        score: -10,
+      },
+    ],
+    best_maps: ["Colosseo", "Aatlis", "Dorado"],
+    worst_maps: ["Havana", "Junkertown", "Eichenwalde"],
+  },
+  hanzo: {
+    name: "hanzo",
+    description:
+      "Sniper with strong mobility, very effective at pressuring tanks with Storm Arrows and protecting points from flankers using Sonic Arrow. His Dragonstrike ultimate is especially powerful in combination with other ultimates, making it a natural pair with Zarya's Graviton Surge.",
+    general_rol: "Damage",
+    secondary_rol: "Sharpshooter",
+    shields: 0,
+    health: 250,
+    armor: 0,
+    on_rotation: true,
+    nicks: ["Hanzo", "Archer", "Sasuke"],
+    counters: [
+      {
+        name: "mei",
+        score: 20,
+      },
+      {
+        name: "brigitte",
+        score: 20,
+      },
+      {
+        name: "torbjorn",
+        score: 20,
+      },
+    ],
+    countered_by: [
+      {
+        name: "dmon",
+        score: 20,
+      },
+      {
+        name: "widowmaker",
+        score: 10,
+      },
+      {
+        name: "sigma",
+        score: 10,
+      },
+    ],
+    best_synergies: [
+      {
+        name: "ramattra",
+        score: 10,
+      },
+      {
+        name: "dmon",
+        score: 10,
+      },
+      {
+        name: "dva",
+        score: 10,
+      },
+    ],
+    worst_synergies: [
+      {
+        name: "junkrat",
+        score: -20,
+      },
+      {
+        name: "soldier-76",
+        score: -10,
+      },
+      {
+        name: "echo",
+        score: -10,
+      },
+    ],
+    best_maps: ["Rialto", "Havana", "King's Row"],
+    worst_maps: ["Watchpoint: Gibraltar", "Aatlis", "Busan"],
+  },
+  hazard: {
+    name: "hazard",
+    description:
+      "Aggressive Stalwart tank built to take and hold space by force. His kit gives him the tools to charge in, displace enemies, and make himself a persistent threat at short to mid range. With a rock-and-roll attitude and the tenacity of a brawler, Hazard is hard to ignore and even harder to push off an objective.",
+    general_rol: "Tank",
+    secondary_rol: "Stalwart",
+    shields: 0,
+    health: 425,
+    armor: 225,
+    on_rotation: true,
+    nicks: [
+      "Hazard",
+      "Phreak",
+      "Phreaks",
+      "Punk",
+      "Frank",
+      "Findlay",
+      "Docherty",
+      "Haz",
+      "Scottish",
+      "Rocker",
+    ],
+    counters: [
+      {
+        name: "orisa",
+        score: 20,
+      },
+      {
+        name: "symmetra",
+        score: 20,
+      },
+      {
+        name: "ramattra",
+        score: 20,
+      },
+    ],
+    countered_by: [
+      {
+        name: "pharah",
+        score: 20,
+      },
+      {
+        name: "zarya",
+        score: 20,
+      },
+      {
+        name: "mei",
+        score: 10,
+      },
+    ],
+    best_synergies: [
+      {
+        name: "shion",
+        score: 10,
+      },
+      {
+        name: "jetpack-cat",
+        score: 10,
+      },
+      {
+        name: "wuyang",
+        score: 10,
+      },
+    ],
+    worst_synergies: [
+      {
+        name: "reinhardt",
+        score: -20,
+      },
+      {
+        name: "dva",
+        score: -10,
+      },
+      {
+        name: "domina",
+        score: -10,
+      },
+    ],
+    best_maps: ["Nepal", "Ilios", "Suravasa"],
+    worst_maps: ["Neon Junction", "Shambali Monastery", "Havana"],
+  },
+  illari: {
+    name: "illari",
+    description:
+      "Illari channels solar energy into both healing and damage. Her Healing Pylon automatically heals allies within its line of sight, while her weapon can deliver a quick burst of healing or pick off enemies at long range. Her Captive Sun ultimate envelops enemies in radiant energy, causing them to explode if they take enough damage, and can impact an entire team fight when used in a tight space.",
+    general_rol: "Support",
+    secondary_rol: "Survivor",
+    shields: 0,
+    health: 250,
+    armor: 0,
+    on_rotation: true,
+    nicks: ["Illari", "sun", "sunlight", "peru", "inti"],
+    counters: [
+      {
+        name: "baptiste",
+        score: 20,
+      },
+      {
+        name: "junkrat",
+        score: 20,
+      },
+      {
+        name: "domina",
+        score: 20,
+      },
+    ],
+    countered_by: [
+      {
+        name: "vendetta",
+        score: 20,
+      },
+      {
+        name: "brigitte",
+        score: 20,
+      },
+      {
+        name: "wrecking-ball",
+        score: 10,
+      },
+    ],
+    best_synergies: [
+      {
+        name: "echo",
+        score: 10,
+      },
+      {
+        name: "jetpack-cat",
+        score: 10,
+      },
+      {
+        name: "junkrat",
+        score: 10,
+      },
+    ],
+    worst_synergies: [
+      {
+        name: "moira",
+        score: -20,
+      },
+      {
+        name: "sierra",
+        score: -10,
+      },
+      {
+        name: "anran",
+        score: -10,
+      },
+    ],
+    best_maps: ["Shambali Monastery", "Hollywood", "Blizzard World"],
+    worst_maps: ["Esperança", "Colosseo", "Ilios"],
+  },
+  "jetpack-cat": {
+    name: "jetpack-cat",
+    description:
+      "One-of-a-kind airborne support with permanent flight. Her Biotic Pawjectiles heal allies and damage enemies in the same spread. Lifeline lets her tow a willing ally at speed, enabling positioning plays never before possible in Overwatch. Her Purr ability pulses area healing while knocking back nearby enemies. Her Catnapper ultimate dives her to a ground location, knocking down and tethering the nearest enemy, often for an environmental kill.",
+    general_rol: "Support",
+    secondary_rol: "Tactician",
+    shields: 0,
+    health: 225,
+    armor: 0,
+    on_rotation: true,
+    nicks: ["Cat", "Jetpack Cat", "Flying Cat", "Fika", "Jetpack", "Fee-ka"],
+    counters: [
+      {
+        name: "wuyang",
+        score: 20,
+      },
+      {
+        name: "widowmaker",
+        score: 20,
+      },
+      {
+        name: "sierra",
+        score: 20,
+      },
+    ],
+    countered_by: [
+      {
+        name: "ramattra",
+        score: 20,
+      },
+      {
+        name: "echo",
+        score: 20,
+      },
+      {
+        name: "lifeweaver",
+        score: 20,
+      },
+    ],
+    best_synergies: [
+      {
+        name: "baptiste",
+        score: 10,
+      },
+      {
+        name: "pharah",
+        score: 10,
+      },
+      {
+        name: "ramattra",
+        score: 10,
+      },
+    ],
+    worst_synergies: [
+      {
+        name: "mizuki",
+        score: -20,
+      },
+      {
+        name: "juno",
+        score: -20,
+      },
+      {
+        name: "domina",
+        score: -20,
+      },
+    ],
+    best_maps: ["Ilios", "Lijiang Tower", "Suravasa"],
+    worst_maps: ["Midtown", "Neon Junction", "Eichenwalde"],
+  },
+  "junker-queen": {
+    name: "junker-queen",
+    description:
+      "Feast-or-famine tank who heals herself with the damage she deals. Her knife and axe enable devastating melee attacks that inflict bleeding and yank victims back toward her. Her Rampage ultimate not only replicates those effects but also prevents enemies from receiving any healing, making it lethal in overtime when the enemy team cannot safely leave the objective.",
+    general_rol: "Tank",
+    secondary_rol: "Stalwart",
+    shields: 0,
+    health: 525,
+    armor: 0,
+    on_rotation: true,
+    nicks: ["Queen", "Junker", "Wastelander", "Junk", "Odessa", "Dez", "Stone"],
+    counters: [
+      {
+        name: "wuyang",
+        score: 20,
+      },
+      {
+        name: "widowmaker",
+        score: 10,
+      },
+      {
+        name: "sierra",
+        score: 10,
+      },
+    ],
+    countered_by: [
+      {
+        name: "shion",
+        score: 20,
+      },
+      {
+        name: "baptiste",
+        score: 20,
+      },
+      {
+        name: "junkrat",
+        score: 20,
+      },
+    ],
+    best_synergies: [
+      {
+        name: "sierra",
+        score: 10,
+      },
+      {
+        name: "zenyatta",
+        score: 10,
+      },
+      {
+        name: "anran",
+        score: 10,
+      },
+    ],
+    worst_synergies: [
+      {
+        name: "domina",
+        score: -20,
+      },
+      {
+        name: "emre",
+        score: -20,
+      },
+      {
+        name: "dva",
+        score: -20,
+      },
+    ],
+    best_maps: ["New Junk City", "Aatlis", "Runasapi"],
+    worst_maps: ["Hollywood", "Numbani", "Blizzard World"],
+  },
+  junkrat: {
+    name: "junkrat",
+    description:
+      "High damage and area denial are Junkrat's defining traits, though he remains vulnerable to mobile heroes. His traps and mines can wreak havoc in enemy lines when placed well. His RIP-Tire ultimate is weak against hitscan heroes, but when used correctly it can swiftly turn the tide of a fight.",
+    general_rol: "Damage",
+    secondary_rol: "Specialist",
+    shields: 0,
+    health: 250,
+    armor: 0,
+    on_rotation: true,
+    nicks: ["Junkrat", "Junk", "Rat"],
+    counters: [
+      {
+        name: "wuyang",
+        score: 20,
+      },
+      {
+        name: "brigitte",
+        score: 20,
+      },
+      {
+        name: "junker-queen",
+        score: 20,
+      },
+    ],
+    countered_by: [
+      {
+        name: "bastion",
+        score: 20,
+      },
+      {
+        name: "ashe",
+        score: 20,
+      },
+      {
+        name: "illari",
+        score: 20,
+      },
+    ],
+    best_synergies: [
+      {
+        name: "shion",
+        score: 10,
+      },
+      {
+        name: "echo",
+        score: 10,
+      },
+      {
+        name: "ashe",
+        score: 10,
+      },
+    ],
+    worst_synergies: [
+      {
+        name: "sierra",
+        score: -20,
+      },
+      {
+        name: "hanzo",
+        score: -20,
+      },
+      {
+        name: "mei",
+        score: -20,
+      },
+    ],
+    best_maps: ["Hollywood", "Dorado", "Shambali Monastery"],
+    worst_maps: ["Eichenwalde", "Busan", "New Queen Street"],
+  },
+  juno: {
+    name: "juno",
+    description:
+      "A highly mobile support from Mars who blends utility and speed to keep her team alive in fast-paced fights. Her Hyper Ring lets allies disengage from danger or push aggressively, rewarding smart timing and positional awareness. Her Orbital Ray ultimate provides a powerful team-wide speed and healing boost that can swing a coordinated engagement decidedly in her team's favor.",
+    general_rol: "Support",
+    secondary_rol: "Survivor",
+    shields: 150,
+    health: 75,
+    armor: 0,
+    on_rotation: true,
+    nicks: ["Juno", "Astronaut", "Space", "Martian", "Mars"],
+    counters: [
+      {
+        name: "lifeweaver",
+        score: 20,
+      },
+      {
+        name: "echo",
+        score: 20,
+      },
+      {
+        name: "baptiste",
+        score: 10,
+      },
+    ],
+    countered_by: [
+      {
+        name: "pharah",
+        score: 20,
+      },
+      {
+        name: "freja",
+        score: 10,
+      },
+      {
+        name: "symmetra",
+        score: 10,
+      },
+    ],
+    best_synergies: [
+      {
+        name: "doomfist",
+        score: 20,
+      },
+      {
+        name: "pharah",
+        score: 10,
+      },
+      {
+        name: "reinhardt",
+        score: 10,
+      },
+    ],
+    worst_synergies: [
+      {
+        name: "jetpack-cat",
+        score: -20,
+      },
+      {
+        name: "baptiste",
+        score: -10,
+      },
+      {
+        name: "wuyang",
+        score: -10,
+      },
+    ],
+    best_maps: ["Runasapi", "Numbani", "Esperança"],
+    worst_maps: ["Rialto", "Nepal", "Eichenwalde"],
+  },
+  kiriko: {
+    name: "kiriko",
+    description:
+      "A support designed with damage in mind. Her teleport makes her elusive and hard to pin down, and her Protection Suzu can cleanse crucial debuffs, including Ana's sleep dart, before they take effect. Her Kitsune Rush ultimate accelerates her team's cooldowns and attack speed in a way the enemy team simply cannot match.",
+    general_rol: "Support",
+    secondary_rol: "Specialist",
+    shields: 0,
+    health: 225,
+    armor: 0,
+    on_rotation: true,
+    nicks: ["Kiriko", "Kamori", "Protector", "Kunoichi", "Fox", "Kitsune"],
+    counters: [
+      {
+        name: "wrecking-ball",
+        score: 10,
+      },
+      {
+        name: "brigitte",
+        score: 10,
+      },
+      {
+        name: "mizuki",
+        score: 10,
+      },
+    ],
+    countered_by: [
+      {
+        name: "freja",
+        score: 10,
+      },
+      {
+        name: "dmon",
+        score: 10,
+      },
+      {
+        name: "mei",
+        score: 10,
+      },
+    ],
+    best_synergies: [
+      {
+        name: "ashe",
+        score: 20,
+      },
+      {
+        name: "ramattra",
+        score: 20,
+      },
+      {
+        name: "torbjorn",
+        score: 20,
+      },
+    ],
+    worst_synergies: [
+      {
+        name: "lifeweaver",
+        score: -10,
+      },
+      {
+        name: "wuyang",
+        score: -10,
+      },
+      {
+        name: "illari",
+        score: 0,
+      },
+    ],
+    best_maps: ["Esperança", "Suravasa", "New Queen Street"],
+    worst_maps: ["Hollywood", "Route 66", "Eichenwalde"],
+  },
+  lifeweaver: {
+    name: "lifeweaver",
+    description:
+      "Lifeweaver uses hard light to replicate the power of nature and provide a comprehensive healing kit for the team. His utility protects allies from death traps, secures kills, and even mitigates his own positioning mistakes. His Petal Platform and dash make it difficult for enemies to dive him, and his Tree of Life ultimate can serve as a team-saving tool or an obstacle to frustrate the enemy's advance.",
+    general_rol: "Support",
+    secondary_rol: "Specialist",
+    shields: 50,
+    health: 200,
+    armor: 0,
+    on_rotation: true,
+    nicks: ["Weaver", "Lifeweaver", "life", "weaver", "tree", "flower"],
+    counters: [
+      {
+        name: "lucio",
+        score: 20,
+      },
+      {
+        name: "jetpack-cat",
+        score: 20,
+      },
+      {
+        name: "mei",
+        score: 20,
+      },
+    ],
+    countered_by: [
+      {
+        name: "mizuki",
+        score: 20,
+      },
+      {
+        name: "baptiste",
+        score: 20,
+      },
+      {
+        name: "sigma",
+        score: 20,
+      },
+    ],
+    best_synergies: [
+      {
+        name: "lucio",
+        score: 10,
+      },
+      {
+        name: "shion",
+        score: 10,
+      },
+      {
+        name: "moira",
+        score: 0,
+      },
+    ],
+    worst_synergies: [
+      {
+        name: "mercy",
+        score: -20,
+      },
+      {
+        name: "kiriko",
+        score: -20,
+      },
+      {
+        name: "ashe",
+        score: -20,
+      },
+    ],
+    best_maps: ["Dorado", "Route 66", "Watchpoint: Gibraltar"],
+    worst_maps: ["Antarctic Peninsula", "New Junk City", "Eichenwalde"],
+  },
+  lucio: {
+    name: "lucio",
+    description:
+      "Dynamic main support whose movement speed aura enables fast-paced compositions like Dive and Rush. His Soundwave is invaluable on maps with environmental hazards, and his Healing Song can sustain multiple heroes simultaneously while he actively contributes damage. His Sound Barrier ultimate can absorb otherwise fight-ending burst damage.",
+    general_rol: "Support",
+    secondary_rol: "Tactician",
+    shields: 0,
+    health: 225,
+    armor: 0,
+    on_rotation: true,
+    nicks: ["Lúcio", "Frog", "Frogger", "DJ", "Brasil", "Mafia"],
+    counters: [
+      {
+        name: "pharah",
+        score: 20,
+      },
+      {
+        name: "hanzo",
+        score: 10,
+      },
+      {
+        name: "domina",
+        score: 10,
+      },
+    ],
+    countered_by: [
+      {
+        name: "echo",
+        score: 20,
+      },
+      {
+        name: "sierra",
+        score: 20,
+      },
+      {
+        name: "lifeweaver",
+        score: 20,
+      },
+    ],
+    best_synergies: [
+      {
+        name: "vendetta",
+        score: 10,
+      },
+      {
+        name: "lifeweaver",
+        score: 10,
+      },
+      {
+        name: "winston",
+        score: 10,
+      },
+    ],
+    worst_synergies: [
+      {
+        name: "ramattra",
+        score: -20,
+      },
+      {
+        name: "sierra",
+        score: -20,
+      },
+      {
+        name: "emre",
+        score: -10,
+      },
+    ],
+    best_maps: ["Ilios", "Lijiang Tower", "Nepal"],
+    worst_maps: ["Hollywood", "Watchpoint: Gibraltar", "Eichenwalde"],
+  },
+  mauga: {
+    name: "mauga",
+    description:
+      "The Berserker tank: unstoppable, he can charge at enemies without being halted. His two chainguns work in deadly synergy, Gunny ignites targets, and Cha-Cha then deals critical damage to those already on fire. His Cage Fight ultimate either locks down trapped enemies for his team to eliminate, or forms a temporary fortress to protect allies from outside threats.",
+    general_rol: "Tank",
+    secondary_rol: "Bruiser",
+    shields: 0,
+    health: 575,
+    armor: 150,
+    on_rotation: true,
+    nicks: [
+      "Mauga",
+      "Maui",
+      "Baptiste",
+      "Samoa",
+      "Chaingun",
+      "Cha-Cha",
+      "Gunny",
+      "Berseker",
+    ],
+    counters: [
+      {
+        name: "junkrat",
+        score: 20,
+      },
+      {
+        name: "ana",
+        score: 10,
+      },
+      {
+        name: "jetpack-cat",
+        score: 10,
+      },
+    ],
+    countered_by: [
+      {
+        name: "pharah",
+        score: 20,
+      },
+      {
+        name: "widowmaker",
+        score: 20,
+      },
+      {
+        name: "ashe",
+        score: 20,
+      },
+    ],
+    best_synergies: [
+      {
+        name: "echo",
+        score: 10,
+      },
+      {
+        name: "junkrat",
+        score: 0,
+      },
+      {
+        name: "reaper",
+        score: 0,
+      },
+    ],
+    worst_synergies: [
+      {
+        name: "ramattra",
+        score: -20,
+      },
+      {
+        name: "shion",
+        score: -20,
+      },
+      {
+        name: "jetpack-cat",
+        score: -20,
+      },
+    ],
+    best_maps: ["Samoa", "Antarctic Peninsula", "Busan"],
+    worst_maps: ["Rialto", "Paraíso", "Eichenwalde"],
+  },
+  mei: {
+    name: "mei",
+    description:
+      "Hybrid DPS who can also function as a secondary tank. Her Ice Wall traps enemies in place, particularly useful against tanks crossing a choke point. Her Blizzard ultimate is underwhelming on its own, but combined with other abilities or ultimates it can set up kills that would otherwise be impossible.",
+    general_rol: "Damage",
+    secondary_rol: "Specialist",
+    shields: 0,
+    health: 300,
+    armor: 0,
+    on_rotation: true,
+    nicks: ["Mei", "Ice", "Demon", "Scientist", "Cold", "Snow", "Snowball"],
+    counters: [
+      {
+        name: "echo",
+        score: 20,
+      },
+      {
+        name: "baptiste",
+        score: 20,
+      },
+      {
+        name: "sombra",
+        score: 20,
+      },
+    ],
+    countered_by: [
+      {
+        name: "hanzo",
+        score: 20,
+      },
+      {
+        name: "lifeweaver",
+        score: 20,
+      },
+      {
+        name: "moira",
+        score: 20,
+      },
+    ],
+    best_synergies: [
+      {
+        name: "echo",
+        score: 10,
+      },
+      {
+        name: "torbjorn",
+        score: 10,
+      },
+      {
+        name: "mizuki",
+        score: 10,
+      },
+    ],
+    worst_synergies: [
+      {
+        name: "tracer",
+        score: -20,
+      },
+      {
+        name: "sierra",
+        score: -20,
+      },
+      {
+        name: "junkrat",
+        score: -20,
+      },
+    ],
+    best_maps: ["King's Row", "Neon Junction", "Shambali Monastery"],
+    worst_maps: ["Watchpoint: Gibraltar", "Colosseo", "Eichenwalde"],
+  },
+  mercy: {
+    name: "mercy",
+    description:
+      "A flying support who empowers her teammates, especially damage heroes, with healing and damage boost. Her high mobility makes her difficult to kill, keeping her effective at contesting points and wasting the enemy's resources. Her Resurrect can completely swing a fight if deployed at the right moment.",
+    general_rol: "Support",
+    secondary_rol: "Specialist",
+    shields: 0,
+    health: 225,
+    armor: 0,
+    on_rotation: true,
+    nicks: ["Mercy", "Medic", "Angela", "Valkyrie", "Witch", "Fly"],
+    counters: [
+      {
+        name: "widowmaker",
+        score: 20,
+      },
+      {
+        name: "sierra",
+        score: 20,
+      },
+      {
+        name: "sombra",
+        score: 10,
+      },
+    ],
+    countered_by: [
+      {
+        name: "dmon",
+        score: 20,
+      },
+      {
+        name: "brigitte",
+        score: 10,
+      },
+      {
+        name: "reaper",
+        score: 10,
+      },
+    ],
+    best_synergies: [
+      {
+        name: "emre",
+        score: 10,
+      },
+      {
+        name: "orisa",
+        score: 10,
+      },
+      {
+        name: "vendetta",
+        score: 10,
+      },
+    ],
+    worst_synergies: [
+      {
+        name: "lifeweaver",
+        score: -10,
+      },
+      {
+        name: "brigitte",
+        score: -10,
+      },
+      {
+        name: "zenyatta",
+        score: -10,
+      },
+    ],
+    best_maps: ["Route 66", "Dorado", "Blizzard World"],
+    worst_maps: ["Nepal", "Eichenwalde", "Samoa"],
+  },
+  mizuki: {
+    name: "mizuki",
+    description:
+      "Aggressive support with a damage-fueled healing aura. His bouncing Spirit Glaive hits enemies around corners, and his Healing Kasa hat bounces between allies to heal them. Katashiro Return lets him dash forward leaving a decoy and teleport back on reactivation. His Binding Chain tethers and hinders the first enemy hit. His Kekkai Sanctuary ultimate creates a healing zone that absorbs enemy projectiles from outside. A Hashimoto clan operative caught between his duties and his conscience in Kanezaka.",
+    general_rol: "Support",
+    secondary_rol: "Survivor",
+    shields: 0,
+    health: 250,
+    armor: 0,
+    on_rotation: true,
+    nicks: [
+      "Mizuki",
+      "Kawano",
+      "Green",
+      "Root",
+      "Kanezaka",
+      "Hashimoto",
+      "Yokai",
+    ],
+    counters: [
+      {
+        name: "pharah",
+        score: 20,
+      },
+      {
+        name: "lifeweaver",
+        score: 20,
+      },
+      {
+        name: "jetpack-cat",
+        score: 20,
+      },
+    ],
+    countered_by: [
+      {
+        name: "shion",
+        score: 20,
+      },
+      {
+        name: "venture",
+        score: 20,
+      },
+      {
+        name: "roadhog",
+        score: 20,
+      },
+    ],
+    best_synergies: [
+      {
+        name: "orisa",
+        score: 20,
+      },
+      {
+        name: "mei",
+        score: 10,
+      },
+      {
+        name: "vendetta",
+        score: 10,
+      },
+    ],
+    worst_synergies: [
+      {
+        name: "jetpack-cat",
+        score: -20,
+      },
+      {
+        name: "sombra",
+        score: -10,
+      },
+      {
+        name: "lifeweaver",
+        score: -10,
+      },
+    ],
+    best_maps: ["Antarctic Peninsula", "Aatlis", "Samoa"],
+    worst_maps: ["Colosseo", "Junkertown", "Eichenwalde"],
+  },
+  moira: {
+    name: "moira",
+    description:
+      "Moira combines a high volume of healing with the ability to easily escape death via Fade. Her capacity to reach the enemy backline with ease makes her a uniquely dangerous support, one capable of applying pressure on enemies while simultaneously sustaining her team.",
+    general_rol: "Support",
+    secondary_rol: "Specialist",
+    shields: 0,
+    health: 225,
+    armor: 0,
+    on_rotation: true,
+    nicks: ["Moira", "Otaku", "Mora"],
+    counters: [
+      {
+        name: "wuyang",
+        score: 20,
+      },
+      {
+        name: "mei",
+        score: 20,
+      },
+      {
+        name: "sombra",
+        score: 10,
+      },
+    ],
+    countered_by: [
+      {
+        name: "baptiste",
+        score: 20,
+      },
+      {
+        name: "hazard",
+        score: 10,
+      },
+      {
+        name: "torbjorn",
+        score: 10,
+      },
+    ],
+    best_synergies: [
+      {
+        name: "dmon",
+        score: 20,
+      },
+      {
+        name: "sombra",
+        score: 10,
+      },
+      {
+        name: "hanzo",
+        score: 10,
+      },
+    ],
+    worst_synergies: [
+      {
+        name: "illari",
+        score: -20,
+      },
+      {
+        name: "freja",
+        score: -10,
+      },
+      {
+        name: "echo",
+        score: -10,
+      },
+    ],
+    best_maps: ["Busan", "Nepal", "Oasis"],
+    worst_maps: ["Circuit Royal", "Havana", "Rialto"],
+  },
+  orisa: {
+    name: "orisa",
+    description:
+      "High-health tank with low cooldowns that make her resilient under sustained fire and a strong objective anchor. Her Energy Javelin can interrupt charges and destabilize enemy lines. However, her ultimate is easy to evade, and high-mobility dive compositions can expose her team's flanks if she is the only tank.",
+    general_rol: "Tank",
+    secondary_rol: "Bruiser",
+    shields: 0,
+    health: 300,
+    armor: 300,
+    on_rotation: true,
+    nicks: ["Orisa", "Horse", "Efi"],
+    counters: [
+      {
+        name: "reinhardt",
+        score: 20,
+      },
+      {
+        name: "jetpack-cat",
+        score: 10,
+      },
+      {
+        name: "echo",
+        score: 10,
+      },
+    ],
+    countered_by: [
+      {
+        name: "torbjorn",
+        score: 20,
+      },
+      {
+        name: "vendetta",
+        score: 20,
+      },
+      {
+        name: "hazard",
+        score: 20,
+      },
+    ],
+    best_synergies: [
+      {
+        name: "mizuki",
+        score: 20,
+      },
+      {
+        name: "venture",
+        score: 10,
+      },
+      {
+        name: "junkrat",
+        score: 10,
+      },
+    ],
+    worst_synergies: [
+      {
+        name: "winston",
+        score: -20,
+      },
+      {
+        name: "reinhardt",
+        score: -20,
+      },
+      {
+        name: "sojourn",
+        score: -20,
+      },
+    ],
+    best_maps: ["Rialto", "Havana", "Route 66"],
+    worst_maps: ["Suravasa", "Runasapi", "Aatlis"],
+  },
+  pharah: {
+    name: "pharah",
+    description:
+      "Designed to stay airborne, Pharah can be a formidable aerial threat. While she is countered by hitscan heroes, played smartly as a flanker she can turn the tables on those trying to bring her down. Her Barrage ultimate is typically reserved as a last resort or a way to quickly disengage and reset.",
+    general_rol: "Damage",
+    secondary_rol: "Recon",
+    shields: 0,
+    health: 225,
+    armor: 0,
+    on_rotation: true,
+    nicks: ["Pharah", "Amari", "Fly"],
+    counters: [
+      {
+        name: "emre",
+        score: 20,
+      },
+      {
+        name: "cassidy",
+        score: 20,
+      },
+      {
+        name: "mauga",
+        score: 20,
+      },
+    ],
+    countered_by: [
+      {
+        name: "mizuki",
+        score: 20,
+      },
+      {
+        name: "shion",
+        score: 20,
+      },
+      {
+        name: "domina",
+        score: 20,
+      },
+    ],
+    best_synergies: [
+      {
+        name: "jetpack-cat",
+        score: 10,
+      },
+      {
+        name: "baptiste",
+        score: 10,
+      },
+      {
+        name: "echo",
+        score: 0,
+      },
+    ],
+    worst_synergies: [
+      {
+        name: "wrecking-ball",
+        score: -20,
+      },
+      {
+        name: "junkrat",
+        score: -20,
+      },
+      {
+        name: "moira",
+        score: -20,
+      },
+    ],
+    best_maps: ["Ilios", "Lijiang Tower", "Nepal"],
+    worst_maps: ["Junkertown", "Havana", "Eichenwalde"],
+  },
+  ramattra: {
+    name: "ramattra",
+    description:
+      "The 'Tempo' tank: Ramattra can shapeshift between a ranged Omnic form and a brutal close-range Nemesis form. His Ravenous Vortex slows and pulls enemies to the ground, providing strong zone control. His Annihilation ultimate is practically an extra cooldown in overtime, persisting as long as he continues to damage enemies who cannot afford to leave the objective.",
+    general_rol: "Tank",
+    secondary_rol: "Stalwart",
+    shields: 0,
+    health: 425,
+    armor: 100,
+    on_rotation: true,
+    nicks: ["Ram", "Ramattra", "Ramatra", "Rammatra", "Rammattra"],
+    counters: [
+      {
+        name: "jetpack-cat",
+        score: 20,
+      },
+      {
+        name: "shion",
+        score: 20,
+      },
+      {
+        name: "sojourn",
+        score: 20,
+      },
+    ],
+    countered_by: [
+      {
+        name: "hazard",
+        score: 20,
+      },
+      {
+        name: "doomfist",
+        score: 10,
+      },
+      {
+        name: "sierra",
+        score: 10,
+      },
+    ],
+    best_synergies: [
+      {
+        name: "hanzo",
+        score: 20,
+      },
+      {
+        name: "ashe",
+        score: 10,
+      },
+      {
+        name: "jetpack-cat",
+        score: 10,
+      },
+    ],
+    worst_synergies: [
+      {
+        name: "lucio",
+        score: -20,
+      },
+      {
+        name: "reinhardt",
+        score: -20,
+      },
+      {
+        name: "sigma",
+        score: -20,
+      },
+    ],
+    best_maps: ["Neon Junction", "Shambali Monastery", "Blizzard World"],
+    worst_maps: ["Suravasa", "New Queen Street", "Esperança"],
+  },
+  reaper: {
+    name: "reaper",
+    description:
+      "Reaper is a powerful flanker whose Death Blossom ultimate can eliminate multiple heroes in a wide area. His Wraith Form allows him to reposition and escape dangerous situations, while his Shadowstep teleport lets him appear from unexpected angles. His shotguns are most effective at very close range, making him a strong counter to high-health targets he can get next to.",
+    general_rol: "Damage",
+    secondary_rol: "Flanker",
+    shields: 0,
+    health: 300,
+    armor: 0,
+    on_rotation: true,
+    nicks: ["Reaper", "Gabriel", "Reyes", "Death"],
+    counters: [
+      {
+        name: "brigitte",
+        score: 20,
+      },
+      {
+        name: "mercy",
+        score: 10,
+      },
+      {
+        name: "wuyang",
+        score: 10,
+      },
+    ],
+    countered_by: [
+      {
+        name: "dmon",
+        score: 10,
+      },
+      {
+        name: "winston",
+        score: 10,
+      },
+      {
+        name: "sierra",
+        score: 10,
+      },
+    ],
+    best_synergies: [
+      {
+        name: "brigitte",
+        score: 20,
+      },
+      {
+        name: "lucio",
+        score: 20,
+      },
+      {
+        name: "mauga",
+        score: 20,
+      },
+    ],
+    worst_synergies: [
+      {
+        name: "venture",
+        score: -10,
+      },
+      {
+        name: "junkrat",
+        score: -10,
+      },
+      {
+        name: "genji",
+        score: -10,
+      },
+    ],
+    best_maps: ["Dorado", "Ilios", "Samoa"],
+    worst_maps: ["Havana", "Shambali Monastery", "Eichenwalde"],
+  },
+  reinhardt: {
+    name: "reinhardt",
+    description:
+      "The archetype of a tank in Overwatch. Reinhardt is dominant at close range and protects his team with his barrier shield while closing distances, interrupting cooldowns with Firestrike, and buying time for his allies. His Earthshatter ultimate is vulnerable to enemy shields, but used smartly through a flank or after baiting the opposition it can completely alter the outcome of a fight.",
+    general_rol: "Tank",
+    secondary_rol: "Stalwart",
+    shields: 0,
+    health: 400,
+    armor: 300,
+    on_rotation: true,
+    nicks: [
+      "Rein",
+      "Reinhardt",
+      "Rein",
+      "Shield",
+      "Crusader",
+      "Garen",
+      "German",
+    ],
+    counters: [
+      {
+        name: "winston",
+        score: 20,
+      },
+      {
+        name: "echo",
+        score: 10,
+      },
+      {
+        name: "symmetra",
+        score: 10,
+      },
+    ],
+    countered_by: [
+      {
+        name: "orisa",
+        score: 20,
+      },
+      {
+        name: "wuyang",
+        score: 20,
+      },
+      {
+        name: "soldier-76",
+        score: 20,
+      },
+    ],
+    best_synergies: [
+      {
+        name: "freja",
+        score: 20,
+      },
+      {
+        name: "junkrat",
+        score: 20,
+      },
+      {
+        name: "anran",
+        score: 10,
+      },
+    ],
+    worst_synergies: [
+      {
+        name: "hazard",
+        score: -20,
+      },
+      {
+        name: "sigma",
+        score: -20,
+      },
+      {
+        name: "ramattra",
+        score: -20,
+      },
+    ],
+    best_maps: ["King's Row", "Lijiang Tower", "Neon Junction"],
+    worst_maps: ["Watchpoint: Gibraltar", "Junkertown", "Paraíso"],
+  },
+  roadhog: {
+    name: "roadhog",
+    description:
+      "High-health tank with strong survivability who can reposition enemies into lethal spots with his Chain Hook. He lacks mobility, but in the right hands his hook combos and self-sustain through Take a Breather make him a constant, difficult-to-ignore threat.",
+    general_rol: "Tank",
+    secondary_rol: "Bruiser",
+    shields: 0,
+    health: 750,
+    armor: 0,
+    on_rotation: true,
+    nicks: ["Hog", "Roadhog", "Road", "Pig", "Hook"],
+    counters: [
+      {
+        name: "mizuki",
+        score: 20,
+      },
+      {
+        name: "torbjorn",
+        score: 20,
+      },
+      {
+        name: "tracer",
+        score: 20,
+      },
+    ],
+    countered_by: [
+      {
+        name: "ramattra",
+        score: 20,
+      },
+      {
+        name: "baptiste",
+        score: 20,
+      },
+      {
+        name: "pharah",
+        score: 20,
+      },
+    ],
+    best_synergies: [
+      {
+        name: "sojourn",
+        score: 20,
+      },
+      {
+        name: "illari",
+        score: 20,
+      },
+      {
+        name: "vendetta",
+        score: 20,
+      },
+    ],
+    worst_synergies: [
+      {
+        name: "reinhardt",
+        score: -10,
+      },
+      {
+        name: "domina",
+        score: -10,
+      },
+      {
+        name: "junker-queen",
+        score: -10,
+      },
+    ],
+    best_maps: ["Ilios", "Nepal", "Rialto"],
+    worst_maps: ["King's Row", "Circuit Royal", "Blizzard World"],
+  },
+  sierra: {
+    name: "sierra",
+    description:
+      "Recon DPS who combines target-locking and aerial repositioning to pursue enemies relentlessly. Her Helix Rifle gains accuracy with sustained fire, and Tracking Shot marks a target so that subsequent shots auto-track them. Her Anchor Drone can be grappled toward for instant repositioning, and Tremor Charge provides area denial. Her Trailblazer ultimate deploys a drone that drops explosives along its path, forcing enemies out of cover.",
+    general_rol: "Damage",
+    secondary_rol: "Recon",
+    shields: 0,
+    health: 250,
+    armor: 0,
+    on_rotation: true,
+    nicks: [
+      "Sierra",
+      "Helix",
+      "Bot",
+      "Drone",
+      "Dorothy",
+      "Roth",
+      "Turner",
+      "Woods",
+    ],
+    counters: [
+      {
+        name: "winston",
+        score: 20,
+      },
+      {
+        name: "lucio",
+        score: 20,
+      },
+      {
+        name: "brigitte",
+        score: 10,
+      },
+    ],
+    countered_by: [
+      {
+        name: "torbjorn",
+        score: 20,
+      },
+      {
+        name: "tracer",
+        score: 20,
+      },
+      {
+        name: "venture",
+        score: 20,
+      },
+    ],
+    best_synergies: [
+      {
+        name: "junker-queen",
+        score: 20,
+      },
+      {
+        name: "lifeweaver",
+        score: 10,
+      },
+      {
+        name: "orisa",
+        score: 10,
+      },
+    ],
+    worst_synergies: [
+      {
+        name: "mei",
+        score: -20,
+      },
+      {
+        name: "lucio",
+        score: -20,
+      },
+      {
+        name: "ashe",
+        score: -20,
+      },
+    ],
+    best_maps: ["Numbani", "Dorado", "Blizzard World"],
+    worst_maps: ["New Junk City", "Aatlis", "Eichenwalde"],
+  },
+  sigma: {
+    name: "sigma",
+    description:
+      "Bunker tank with significant damage output. His deployable shield protects heroes who prefer to hold static positions. Accretion is a useful stun that can interrupt key enemy abilities, and his Gravitic Flux ultimate not only deals significant damage but can also reposition enemies on the battlefield.",
+    general_rol: "Tank",
+    secondary_rol: "Stalwart",
+    shields: 275,
+    health: 350,
+    armor: 0,
+    on_rotation: true,
+    nicks: ["Sigma", "Foot", "Foots", "Gravity", "Melody", "Fly", "Rock"],
+    counters: [
+      {
+        name: "lifeweaver",
+        score: 20,
+      },
+      {
+        name: "wrecking-ball",
+        score: 20,
+      },
+      {
+        name: "sierra",
+        score: 20,
+      },
+    ],
+    countered_by: [
+      {
+        name: "soldier-76",
+        score: 10,
+      },
+      {
+        name: "bastion",
+        score: 10,
+      },
+      {
+        name: "torbjorn",
+        score: 10,
+      },
+    ],
+    best_synergies: [
+      {
+        name: "bastion",
+        score: 20,
+      },
+      {
+        name: "widowmaker",
+        score: 20,
+      },
+      {
+        name: "tracer",
+        score: 20,
+      },
+    ],
+    worst_synergies: [
+      {
+        name: "doomfist",
+        score: -20,
+      },
+      {
+        name: "reinhardt",
+        score: -20,
+      },
+      {
+        name: "ramattra",
+        score: -10,
+      },
+    ],
+    best_maps: ["Circuit Royal", "Havana", "Shambali Monastery"],
+    worst_maps: ["New Junk City", "Lijiang Tower", "Suravasa"],
+  },
+  shion: {
+    name: "shion",
+    description: "",
+    general_rol: "Damage",
+    secondary_rol: "Flanker",
+    shields: 0,
+    health: 250,
+    armor: 0,
+    on_rotation: true,
+    nicks: ["Shion", "Cyborg", "Hashimoto"],
+    counters: [
+      {
+        name: "torbjorn",
+        score: 20,
+      },
+      {
+        name: "pharah",
+        score: 20,
+      },
+      {
+        name: "symmetra",
+        score: 20,
+      },
+    ],
+    countered_by: [
+      {
+        name: "ramattra",
+        score: 20,
+      },
+      {
+        name: "sojourn",
+        score: 20,
+      },
+      {
+        name: "dva",
+        score: 20,
+      },
+    ],
+    best_synergies: [
+      {
+        name: "dmon",
+        score: 20,
+      },
+      {
+        name: "junkrat",
+        score: 10,
+      },
+      {
+        name: "genji",
+        score: 10,
+      },
+    ],
+    worst_synergies: [
+      {
+        name: "doomfist",
+        score: -20,
+      },
+      {
+        name: "soldier-76",
+        score: -20,
+      },
+      {
+        name: "ashe",
+        score: -20,
+      },
+    ],
+    best_maps: ["Runasapi", "Colosseo", "New Junk City"],
+    worst_maps: ["Circuit Royal", "Dorado", "Eichenwalde"],
+  },
+  sojourn: {
+    name: "sojourn",
+    description:
+      "Highly mobile DPS with strong assassination potential thanks to her railgun's charged shots. Power Slide allows her to quickly reposition and line up kills on high-value targets, and Disruptor Shot is an excellent tool for denying zones and slowing enemies caught in its field.",
+    general_rol: "Damage",
+    secondary_rol: "Sharpshooter",
+    shields: 0,
+    health: 225,
+    armor: 0,
+    on_rotation: true,
+    nicks: ["Sojou", "Sojourn", "Sojorn", "Legs", "Tights", "Vivian", "Chase"],
+    counters: [
+      {
+        name: "shion",
+        score: 20,
+      },
+      {
+        name: "lifeweaver",
+        score: 10,
+      },
+      {
+        name: "lucio",
+        score: 10,
+      },
+    ],
+    countered_by: [
+      {
+        name: "doomfist",
+        score: 20,
+      },
+      {
+        name: "ramattra",
+        score: 20,
+      },
+      {
+        name: "vendetta",
+        score: 20,
+      },
+    ],
+    best_synergies: [
+      {
+        name: "illari",
+        score: 20,
+      },
+      {
+        name: "roadhog",
+        score: 20,
+      },
+      {
+        name: "dva",
+        score: 10,
+      },
+    ],
+    worst_synergies: [
+      {
+        name: "mei",
+        score: -10,
+      },
+      {
+        name: "anran",
+        score: -10,
+      },
+      {
+        name: "dmon",
+        score: -10,
+      },
+    ],
+    best_maps: ["Neon Junction", "Midtown", "Circuit Royal"],
+    worst_maps: ["Watchpoint: Gibraltar", "Dorado", "Eichenwalde"],
+  },
+  "soldier-76": {
+    name: "soldier-76",
+    description:
+      "A straightforward hero and a great entry point for new players. Soldier: 76 has solid damage output, particularly against airborne targets, and his Sprint lets him reposition quickly to advantageous spots. His Tactical Visor ultimate is an auto-aiming onslaught that can rapidly confirm kills on priority targets.",
+    general_rol: "Damage",
+    secondary_rol: "Specialist",
+    shields: 0,
+    health: 250,
+    armor: 0,
+    on_rotation: true,
+    nicks: ["Soldier", "Soldier: 76", "76", "Jack", "Morrison", "Legs"],
+    counters: [
+      {
+        name: "reinhardt",
+        score: 20,
+      },
+      {
+        name: "baptiste",
+        score: 10,
+      },
+      {
+        name: "junkrat",
+        score: 10,
+      },
+    ],
+    countered_by: [
+      {
+        name: "ramattra",
+        score: 10,
+      },
+      {
+        name: "reaper",
+        score: 10,
+      },
+      {
+        name: "tracer",
+        score: 10,
+      },
+    ],
+    best_synergies: [
+      {
+        name: "hazard",
+        score: 20,
+      },
+      {
+        name: "ana",
+        score: 20,
+      },
+      {
+        name: "orisa",
+        score: 20,
+      },
+    ],
+    worst_synergies: [
+      {
+        name: "shion",
+        score: -20,
+      },
+      {
+        name: "anran",
+        score: -10,
+      },
+      {
+        name: "symmetra",
+        score: -10,
+      },
+    ],
+    best_maps: ["New Queen Street", "Busan", "Runasapi"],
+    worst_maps: ["Neon Junction", "King's Row", "Eichenwalde"],
+  },
+  sombra: {
+    name: "sombra",
+    description:
+      "The ultimate infiltrator. Sombra can cross the battlefield undetected and hack enemies to instantly disable their abilities, leaving them exposed to her team. Her Translocator provides a reliable escape from bad positions, and her EMP ultimate simultaneously hacks and damages every enemy in range, creating a massive window for her team to follow up.",
+    general_rol: "Damage",
+    secondary_rol: "Recon",
+    shields: 0,
+    health: 225,
+    armor: 0,
+    on_rotation: true,
+    nicks: ["Somb", "Sombra", "Hacker", "Mexican", "Mexico", "Los Muertos"],
+    counters: [
+      {
+        name: "junkrat",
+        score: 20,
+      },
+      {
+        name: "cassidy",
+        score: 20,
+      },
+      {
+        name: "shion",
+        score: 20,
+      },
+    ],
+    countered_by: [
+      {
+        name: "echo",
+        score: 20,
+      },
+      {
+        name: "mei",
+        score: 20,
+      },
+      {
+        name: "zarya",
+        score: 20,
+      },
+    ],
+    best_synergies: [
+      {
+        name: "zarya",
+        score: 10,
+      },
+      {
+        name: "emre",
+        score: 10,
+      },
+      {
+        name: "hanzo",
+        score: 0,
+      },
+    ],
+    worst_synergies: [
+      {
+        name: "freja",
+        score: -20,
+      },
+      {
+        name: "mizuki",
+        score: -20,
+      },
+      {
+        name: "sigma",
+        score: -20,
+      },
+    ],
+    best_maps: ["Colosseo", "New Queen Street", "Numbani"],
+    worst_maps: ["Neon Junction", "Rialto", "Eichenwalde"],
+  },
+  symmetra: {
+    name: "symmetra",
+    description:
+      "Lethal at close range, Symmetra deals increasing damage the longer her beam stays on target. Her turrets are excellent for area control and detecting flankers, and her Teleporter allows her team to bypass choke points and access flanking positions that can catch the enemy completely off guard.",
+    general_rol: "Damage",
+    secondary_rol: "Specialist",
+    shields: 150,
+    health: 125,
+    armor: 0,
+    on_rotation: true,
+    nicks: ["Sym", "Symmetra", "Summoner", "Teleporter", "TP", "Microwave"],
+    counters: [
+      {
+        name: "baptiste",
+        score: 20,
+      },
+      {
+        name: "juno",
+        score: 10,
+      },
+      {
+        name: "widowmaker",
+        score: 10,
+      },
+    ],
+    countered_by: [
+      {
+        name: "shion",
+        score: 20,
+      },
+      {
+        name: "genji",
+        score: 20,
+      },
+      {
+        name: "hazard",
+        score: 20,
+      },
+    ],
+    best_synergies: [
+      {
+        name: "vendetta",
+        score: 10,
+      },
+      {
+        name: "lucio",
+        score: 0,
+      },
+      {
+        name: "mauga",
+        score: 0,
+      },
+    ],
+    worst_synergies: [
+      {
+        name: "soldier-76",
+        score: -20,
+      },
+      {
+        name: "orisa",
+        score: -10,
+      },
+      {
+        name: "brigitte",
+        score: -10,
+      },
+    ],
+    best_maps: ["Lijiang Tower", "Nepal", "Samoa"],
+    worst_maps: ["Route 66", "Junkertown", "Eichenwalde"],
+  },
+  torbjorn: {
+    name: "torbjorn",
+    description:
+      "The quintessential engineer hero. Torbjörn's turret is highly effective at stopping flankers and holding angles, his primary weapon provides reliable poke damage at range, and his Molten Core ultimate can completely deny a key area of the map for its full duration.",
+    general_rol: "Damage",
+    secondary_rol: "Specialist",
+    shields: 0,
+    health: 225,
+    armor: 75,
+    on_rotation: true,
+    nicks: ["Torb", "Torbjörn", "Torbjorn", "Dwarf", "Enginner", "Lindholm"],
+    counters: [
+      {
+        name: "wuyang",
+        score: 20,
+      },
+      {
+        name: "orisa",
+        score: 20,
+      },
+      {
+        name: "wrecking-ball",
+        score: 20,
+      },
+    ],
+    countered_by: [
+      {
+        name: "shion",
+        score: 20,
+      },
+      {
+        name: "hanzo",
+        score: 20,
+      },
+      {
+        name: "roadhog",
+        score: 20,
+      },
+    ],
+    best_synergies: [
+      {
+        name: "mei",
+        score: 10,
+      },
+      {
+        name: "lucio",
+        score: 10,
+      },
+      {
+        name: "cassidy",
+        score: 10,
+      },
+    ],
+    worst_synergies: [
+      {
+        name: "junkrat",
+        score: -10,
+      },
+      {
+        name: "wuyang",
+        score: -10,
+      },
+      {
+        name: "bastion",
+        score: -10,
+      },
+    ],
+    best_maps: ["Busan", "Samoa", "Eichenwalde"],
+    worst_maps: ["Route 66", "Colosseo", "Watchpoint: Gibraltar"],
+  },
+  tracer: {
+    name: "tracer",
+    description:
+      "Speed and high burst damage converge in Tracer, who can be nearly unkillable thanks to her Blinks and the ability to Recall her health and position. Less mobile enemies are highly vulnerable to her Pulse Pistols, and her sticky Pulse Bomb condemns targets to an explosive death with little counterplay.",
+    general_rol: "Damage",
+    secondary_rol: "Flanker",
+    shields: 0,
+    health: 175,
+    armor: 0,
+    on_rotation: true,
+    nicks: ["Tracer", "Pilot", "Lena", "Light", "Time", "Recall"],
+    counters: [
+      {
+        name: "sierra",
+        score: 20,
+      },
+      {
+        name: "echo",
+        score: 20,
+      },
+      {
+        name: "winston",
+        score: 20,
+      },
+    ],
+    countered_by: [
+      {
+        name: "roadhog",
+        score: 20,
+      },
+      {
+        name: "ramattra",
+        score: 10,
+      },
+      {
+        name: "dmon",
+        score: 10,
+      },
+    ],
+    best_synergies: [
+      {
+        name: "wrecking-ball",
+        score: 20,
+      },
+      {
+        name: "brigitte",
+        score: 20,
+      },
+      {
+        name: "wuyang",
+        score: 10,
+      },
+    ],
+    worst_synergies: [
+      {
+        name: "mei",
+        score: -20,
+      },
+      {
+        name: "bastion",
+        score: -20,
+      },
+      {
+        name: "hanzo",
+        score: -10,
+      },
+    ],
+    best_maps: ["Colosseo", "Runasapi", "Esperança"],
+    worst_maps: ["Dorado", "Circuit Royal", "Eichenwalde"],
+  },
+  vendetta: {
+    name: "vendetta",
+    description:
+      "Overwatch's first melee damage hero. Her Onslaught passive increases movement and attack speed with every successful strike. Warding Stance blocks frontal damage and deflects melees at the cost of energy, Whirlwind Dash launches her into a circular slash, and Soaring Slice hurls her sword forward and flies her to it. Her Sundering Blade ultimate cleaves through most defenses for devastating frontal damage. Ruthless champion of Rome's Colosseo and newly crowned leader of Talon.",
+    general_rol: "Damage",
+    secondary_rol: "Flanker",
+    shields: 0,
+    health: 200,
+    armor: 75,
+    on_rotation: true,
+    nicks: [
+      "Venda",
+      "Vendetta",
+      "Vengeance",
+      "Gladiator",
+      "Italy",
+      "Roman",
+      "Italian",
+      "Colosseum",
+      "Big Sword",
+    ],
+    counters: [
+      {
+        name: "wuyang",
+        score: 20,
+      },
+      {
+        name: "orisa",
+        score: 20,
+      },
+      {
+        name: "winston",
+        score: 20,
+      },
+    ],
+    countered_by: [
+      {
+        name: "baptiste",
+        score: 20,
+      },
+      {
+        name: "lifeweaver",
+        score: 10,
+      },
+      {
+        name: "roadhog",
+        score: 10,
+      },
+    ],
+    best_synergies: [
+      {
+        name: "lucio",
+        score: 10,
+      },
+      {
+        name: "sierra",
+        score: 10,
+      },
+      {
+        name: "doomfist",
+        score: 10,
+      },
+    ],
+    worst_synergies: [
+      {
+        name: "juno",
+        score: -20,
+      },
+      {
+        name: "ana",
+        score: -20,
+      },
+      {
+        name: "anran",
+        score: -20,
+      },
+    ],
+    best_maps: ["Dorado", "Watchpoint: Gibraltar", "Paraíso"],
+    worst_maps: ["Midtown", "Circuit Royal", "Eichenwalde"],
+  },
+  venture: {
+    name: "venture",
+    description:
+      "Known as the miner hero, Venture drills their way through the battlefield pushing enemies into the void or dealing massive burst damage. Their cooldowns are easy to waste, however, leaving them stranded in a bad position at the worst moment. Their ultimate deals heavy damage but is relatively easy to avoid if enemies have room to move.",
+    general_rol: "Damage",
+    secondary_rol: "Flanker",
+    shields: 0,
+    health: 250,
+    armor: 0,
+    on_rotation: true,
+    nicks: [
+      "Ventur",
+      "Venture",
+      "Venchure",
+      "Adventure",
+      "I Can Dig That",
+      "Rock Eater",
+      "Rock Guy",
+      "Archeologist",
+      "Excavator",
+      "Miner",
+    ],
+    counters: [
+      {
+        name: "mizuki",
+        score: 20,
+      },
+      {
+        name: "sierra",
+        score: 20,
+      },
+      {
+        name: "ashe",
+        score: 20,
+      },
+    ],
+    countered_by: [
+      {
+        name: "genji",
+        score: 20,
+      },
+      {
+        name: "jetpack-cat",
+        score: 10,
+      },
+      {
+        name: "mei",
+        score: 10,
+      },
+    ],
+    best_synergies: [
+      {
+        name: "jetpack-cat",
+        score: 10,
+      },
+      {
+        name: "orisa",
+        score: 10,
+      },
+      {
+        name: "lucio",
+        score: 10,
+      },
+    ],
+    worst_synergies: [
+      {
+        name: "reaper",
+        score: -10,
+      },
+      {
+        name: "anran",
+        score: -10,
+      },
+      {
+        name: "juno",
+        score: -10,
+      },
+    ],
+    best_maps: ["Shambali Monastery", "Neon Junction", "Midtown"],
+    worst_maps: ["Havana", "Circuit Royal", "Eichenwalde"],
+  },
+  widowmaker: {
+    name: "widowmaker",
+    description:
+      "The ultimate sniper, Widowmaker is lethal on maps with long sightlines but very weak against close-range heroes like dive compositions. Her Venom Mine is useful for detecting flankers early, and her Infra-Sight ultimate reveals all enemies for the entire team, a massive information advantage for coordinated play.",
+    general_rol: "Damage",
+    secondary_rol: "Sharpshooter",
+    shields: 0,
+    health: 225,
+    armor: 0,
+    on_rotation: true,
+    nicks: ["Widow", "Widowmaker", "Spider", "Sniper", "Venom"],
+    counters: [
+      {
+        name: "mauga",
+        score: 20,
+      },
+      {
+        name: "dva",
+        score: 20,
+      },
+      {
+        name: "lifeweaver",
+        score: 10,
+      },
+    ],
+    countered_by: [
+      {
+        name: "mercy",
+        score: 20,
+      },
+      {
+        name: "bastion",
+        score: 20,
+      },
+      {
+        name: "jetpack-cat",
+        score: 20,
+      },
+    ],
+    best_synergies: [
+      {
+        name: "wuyang",
+        score: 0,
+      },
+      {
+        name: "zenyatta",
+        score: 0,
+      },
+      {
+        name: "freja",
+        score: 0,
+      },
+    ],
+    worst_synergies: [
+      {
+        name: "shion",
+        score: -20,
+      },
+      {
+        name: "reinhardt",
+        score: -20,
+      },
+      {
+        name: "emre",
+        score: -20,
+      },
+    ],
+    best_maps: ["King's Row", "Havana", "Junkertown"],
+    worst_maps: ["Nepal", "Oasis", "Eichenwalde"],
+  },
+  winston: {
+    name: "winston",
+    description:
+      "This gorilla excels on maps with multiple heights. His Tesla Cannon deals consistent damage to several targets at once, and combining his Jump Pack with a burst shot can efficiently eliminate squishy heroes. His Primal Rage ultimate provides a massive health boost and strong knockback, functioning as a second life when Winston is deep in the enemy backline.",
+    general_rol: "Tank",
+    secondary_rol: "Initiator",
+    shields: 0,
+    health: 425,
+    armor: 200,
+    on_rotation: true,
+    nicks: [
+      "Winton",
+      "Winston",
+      "Monkey",
+      "Scientist",
+      "Moon",
+      "Monky",
+      "Angry",
+      "Angy",
+    ],
+    counters: [
+      {
+        name: "mauga",
+        score: 10,
+      },
+      {
+        name: "reaper",
+        score: 10,
+      },
+      {
+        name: "juno",
+        score: 10,
+      },
+    ],
+    countered_by: [
+      {
+        name: "sierra",
+        score: 20,
+      },
+      {
+        name: "anran",
+        score: 20,
+      },
+      {
+        name: "vendetta",
+        score: 20,
+      },
+    ],
+    best_synergies: [
+      {
+        name: "anran",
+        score: 10,
+      },
+      {
+        name: "lucio",
+        score: 10,
+      },
+      {
+        name: "emre",
+        score: 10,
+      },
+    ],
+    worst_synergies: [
+      {
+        name: "doomfist",
+        score: -20,
+      },
+      {
+        name: "orisa",
+        score: -20,
+      },
+      {
+        name: "sigma",
+        score: -20,
+      },
+    ],
+    best_maps: ["Watchpoint: Gibraltar", "Dorado", "Numbani"],
+    worst_maps: ["Shambali Monastery", "Midtown", "Neon Junction"],
+  },
+  "wrecking-ball": {
+    name: "wrecking-ball",
+    description:
+      "The most mobile hero in the game, Wrecking Ball is a sniper's nightmare, in ball form he has no critical hit point to target. His Piledriver and Grappling Claw put enemies in vulnerable positions his team can exploit. His Minefield ultimate denies a large area of the map, though it can be countered by various enemy abilities.",
+    general_rol: "Tank",
+    secondary_rol: "Initiator",
+    shields: 150,
+    health: 450,
+    armor: 125,
+    on_rotation: true,
+    nicks: [
+      "Ball",
+      "Wrecking Ball",
+      "Wrecking",
+      "Hammond",
+      "Hamster",
+      "Rat",
+      "Moon",
+    ],
+    counters: [
+      {
+        name: "mizuki",
+        score: 10,
+      },
+      {
+        name: "illari",
+        score: 10,
+      },
+      {
+        name: "ashe",
+        score: 10,
+      },
+    ],
+    countered_by: [
+      {
+        name: "torbjorn",
+        score: 20,
+      },
+      {
+        name: "sigma",
+        score: 20,
+      },
+      {
+        name: "anran",
+        score: 20,
+      },
+    ],
+    best_synergies: [
+      {
+        name: "tracer",
+        score: 20,
+      },
+      {
+        name: "brigitte",
+        score: 10,
+      },
+      {
+        name: "freja",
+        score: 10,
+      },
+    ],
+    worst_synergies: [
+      {
+        name: "soldier-76",
+        score: -20,
+      },
+      {
+        name: "zarya",
+        score: -20,
+      },
+      {
+        name: "pharah",
+        score: -20,
+      },
+    ],
+    best_maps: ["Colosseo", "Junkertown", "Dorado"],
+    worst_maps: ["Rialto", "Samoa", "Eichenwalde"],
+  },
+  wuyang: {
+    name: "wuyang",
+    description:
+      "Rhythm-based support from Wuxing University's Water College who blends healing, knockback, and mobility. His steerable water orb can be held to empower its explosion, and Guardian Wave pushes enemies back while amplifying ally healing received. Rushing Torrent gives him a burst of speed and jump height. His Tidal Blast ultimate wraps a target in water that detonates after a short delay, massively healing the host and knocking down nearby enemies.",
+    general_rol: "Support",
+    secondary_rol: "Survivor",
+    shields: 0,
+    health: 225,
+    armor: 0,
+    on_rotation: true,
+    nicks: ["Wuyang", "Water", "skater", "stick", "wave"],
+    counters: [
+      {
+        name: "reinhardt",
+        score: 20,
+      },
+      {
+        name: "freja",
+        score: 20,
+      },
+      {
+        name: "bastion",
+        score: 20,
+      },
+    ],
+    countered_by: [
+      {
+        name: "torbjorn",
+        score: 20,
+      },
+      {
+        name: "vendetta",
+        score: 20,
+      },
+      {
+        name: "jetpack-cat",
+        score: 20,
+      },
+    ],
+    best_synergies: [
+      {
+        name: "dva",
+        score: 10,
+      },
+      {
+        name: "tracer",
+        score: 10,
+      },
+      {
+        name: "widowmaker",
+        score: 0,
+      },
+    ],
+    worst_synergies: [
+      {
+        name: "sierra",
+        score: -20,
+      },
+      {
+        name: "doomfist",
+        score: -20,
+      },
+      {
+        name: "kiriko",
+        score: -20,
+      },
+    ],
+    best_maps: ["Colosseo", "New Queen Street", "Runasapi"],
+    worst_maps: ["Lijiang Tower", "Ilios", "Eichenwalde"],
+  },
+  zarya: {
+    name: "zarya",
+    description:
+      "Zarya wields a powerful weapon that grows stronger as she absorbs damage with her personal and projected barriers, the more energy she accumulates, the more devastating her output. Her Graviton Surge ultimate gathers enemies into a tight cluster where they are completely vulnerable to her high-energy beam and any follow-up from her team.",
+    general_rol: "Tank",
+    secondary_rol: "Bruiser",
+    shields: 225,
+    health: 325,
+    armor: 0,
+    on_rotation: true,
+    nicks: ["Zarya", "Russian", "Rusia", "Strong", "Gravity"],
+    counters: [
+      {
+        name: "brigitte",
+        score: 20,
+      },
+      {
+        name: "pharah",
+        score: 20,
+      },
+      {
+        name: "cassidy",
+        score: 20,
+      },
+    ],
+    countered_by: [
+      {
+        name: "domina",
+        score: 20,
+      },
+      {
+        name: "bastion",
+        score: 10,
+      },
+      {
+        name: "venture",
+        score: 10,
+      },
+    ],
+    best_synergies: [
+      {
+        name: "sombra",
+        score: 20,
+      },
+      {
+        name: "zenyatta",
+        score: 20,
+      },
+      {
+        name: "symmetra",
+        score: 20,
+      },
+    ],
+    worst_synergies: [
+      {
+        name: "wrecking-ball",
+        score: -20,
+      },
+      {
+        name: "brigitte",
+        score: -10,
+      },
+      {
+        name: "orisa",
+        score: -10,
+      },
+    ],
+    best_maps: ["Midtown", "Samoa", "King's Row"],
+    worst_maps: ["Dorado", "Ilios", "Esperança"],
+  },
+  zenyatta: {
+    name: "zenyatta",
+    description:
+      "A glass cannon support in every sense. His damage output often outweighs his healing, especially the sustained threat of his Discord Orb which amplifies all incoming damage to a marked target. His only real defensive tool is a surprisingly powerful kick that punishes close-range attackers. His Transcendence ultimate is one of the most powerful counters to burst damage in the game.",
+    general_rol: "Support",
+    secondary_rol: "Tactician",
+    shields: 175,
+    health: 75,
+    armor: 0,
+    on_rotation: true,
+    nicks: ["Zen", "Zenyatta", "Monk", "Omnic", "Budist"],
+    counters: [
+      {
+        name: "domina",
+        score: 20,
+      },
+      {
+        name: "sombra",
+        score: 20,
+      },
+      {
+        name: "reinhardt",
+        score: 10,
+      },
+    ],
+    countered_by: [
+      {
+        name: "freja",
+        score: 20,
+      },
+      {
+        name: "baptiste",
+        score: 10,
+      },
+      {
+        name: "sojourn",
+        score: 10,
+      },
+    ],
+    best_synergies: [
+      {
+        name: "freja",
+        score: 20,
+      },
+      {
+        name: "junker-queen",
+        score: 20,
+      },
+      {
+        name: "ashe",
+        score: 10,
+      },
+    ],
+    worst_synergies: [
+      {
+        name: "brigitte",
+        score: -20,
+      },
+      {
+        name: "mei",
+        score: -10,
+      },
+      {
+        name: "mizuki",
+        score: -10,
+      },
+    ],
+    best_maps: ["Havana", "Rialto", "King's Row"],
+    worst_maps: ["Esperança", "Oasis", "Eichenwalde"],
+  },
+};

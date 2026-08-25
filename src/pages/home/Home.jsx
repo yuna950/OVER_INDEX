@@ -13,8 +13,8 @@ export default function Home() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    try {
-      (async () => {
+    (async () => {
+      try {
         // 포지션
         const positions = await getPosition();
         setPositionData(positions);
@@ -26,12 +26,12 @@ export default function Home() {
         // 픽률
         const stats = await getHeroStats();
         setStatsData(stats);
-      })();
-    } catch (error) {
-      console.log(error);
-    } finally {
-      setLoading(false);
-    }
+      } catch (error) {
+        console.log(error);
+      } finally {
+        setLoading(false);
+      }
+    })();
   }, []);
 
   if (loading) {
