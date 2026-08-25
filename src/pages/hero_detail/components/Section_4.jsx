@@ -31,7 +31,9 @@ export default function Section_4({ data, title }) {
 
   return (
     <div className="py-12.5">
-      <h2 className="text-2xl font-bold text-center mb-7.5">{title}</h2>
+      <h2 className="text-2xl lg:text-[40px] font-bold text-center mb-7.5 lg:mb-15">
+        {title}
+      </h2>
 
       <Swiper
         className="w-full lg:w-[80%] h-full overflow-visible! "
@@ -68,7 +70,7 @@ export default function Section_4({ data, title }) {
                     e.currentTarget.style.boxShadow = "none";
                   }}
                 >
-                  <div className="flex flex-col gap-2.5 items-center">
+                  <div className="flex flex-col gap-2.5 lg:gap-7 items-center">
                     <div className="w-full rounded-[50%] overflow-hidden bg-gray-400">
                       <img
                         src={hero.portrait}
@@ -81,7 +83,7 @@ export default function Section_4({ data, title }) {
                   </div>
 
                   <div
-                    className="w-fit px-3 py-1 rounded-2xl border text-[12px] flex items-center justify-center"
+                    className="w-fit px-3 py-1 rounded-2xl border text-[12px] lg:text-[16px] flex items-center justify-center"
                     style={{
                       borderColor: color,
                       color,

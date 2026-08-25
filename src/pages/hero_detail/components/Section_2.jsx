@@ -1,11 +1,15 @@
 import { useEffect, useState } from "react";
+
 import { Swiper, SwiperSlide } from "swiper/react";
+
 import "swiper/css";
+
 import Loading from "../../../components/Loading";
 
 export default function Section_2({ detail }) {
   const [selectedSkill, setSelectedSkill] = useState(null);
   const [isVideoLoading, setIsVideoLoading] = useState(true);
+  const [isLocked, setIsLocked] = useState(false);
 
   const abilities = detail?.abilities ?? [];
 
@@ -18,17 +22,26 @@ export default function Section_2({ detail }) {
 
   return (
     <div className="w-full py-25 flex flex-col gap-7.5 justify-center items-center">
-      <h2 className="text-2xl font-bold">스킬</h2>
+      <h2 className="text-2xl lg:text-[40px] font-bold">스킬</h2>
 
-      <div className="w-full h-full py-5 px-5 overflow-hidden">
+      {/* 스킬 아이콘 */}
+      <div className="w-full py-5 px-5 overflow-hidden">
         <Swiper
-          className="w-full h-full overflow-visible!"
-          slidesPerView={4.8}
-          spaceBetween={20}
+          className={`skill-swiper w-full overflow-visible! ${
+            isLocked ? "skill-swiper-centered" : ""
+          }`}
+          slidesPerView="auto"
+          spaceBetween={30}
+          watchOverflow={true}
+          onSwiper={(swiper) => {
+            setIsLocked(swiper.isLocked);
+          }}
+          onResize={(swiper) => {
+            setIsLocked(swiper.isLocked);
+          }}
         >
-          {/* 스킬 아이콘 */}
           {abilities.map((skill) => (
-            <SwiperSlide key={skill.name}>
+            <SwiperSlide key={skill.name} className="!w-auto">
               <button
                 type="button"
                 onClick={() => {
@@ -36,14 +49,18 @@ export default function Section_2({ detail }) {
                   setIsVideoLoading(true);
                 }}
                 className={`
-                  w-15 
-                  h-15 
-                  flex justify-center items-center 
-                  p-2.5 
-                  rounded-full 
-                  border 
-                  transition 
-                  cursor-pointer 
+                  w-15
+                  h-15
+                  lg:w-23
+                  lg:h-23
+                  flex
+                  justify-center
+                  items-center
+                  p-2.5
+                  rounded-full
+                  border
+                  transition
+                  cursor-pointer
                   ${
                     selectedSkill?.name === skill.name
                       ? "border-[#FA9C1D] opacity-100 shadow-[0_0_20px_rgba(250,156,29,1)]"
@@ -87,9 +104,12 @@ export default function Section_2({ detail }) {
           </div>
 
           <div className="text-center mt-7.5">
-            <h3 className="text-xl font-semibold">{selectedSkill.name}</h3>
-            <p className="text-sm opacity-70 mt-5">
-              {selectedSkill?.description}
+            <h3 className="text-xl lg:text-3xl font-semibold">
+              {selectedSkill.name}
+            </h3>
+
+            <p className="text-sm lg:text-lg opacity-70 mt-5">
+              {selectedSkill.description}
             </p>
           </div>
         </div>

@@ -65,3 +65,7 @@ ol {
   padding: 0;
   margin: 0;
 }
+
+.skill-swiper-centered .swiper-wrapper {
+  justify-content: center;
+}
