@@ -59,7 +59,7 @@ export default function Home() {
         w-75 top-185 -left-25 
         lg:w-165 lg:top-195 lg:-left-50
         xl:w-200 xl:top-230 xl:-left-60.5 
-        opacity-30  "
+        opacity-30 -z-10 "
         >
           <img src="/tank.png" alt="tank_hero" />
           <div className="absolute bottom-0 left-0 w-full h-[70%] bg-linear-to-t from-[#060a14] to-transparent" />
@@ -87,7 +87,7 @@ export default function Home() {
         w-95 top-330 -right-30 
         lg:w-165 lg:top-350 lg:-right-50
         xl:w-200 xl:top-400 xl:-right-60.5 
-        opacity-30 "
+        opacity-30 -z-10"
         >
           <img src="/damage.png" alt="tank_hero" />
           <div className="absolute bottom-0 left-0 w-full h-[70%] bg-linear-to-t from-[#060a14] to-transparent" />
@@ -115,7 +115,7 @@ export default function Home() {
         w-180 top-470 -left-65
         lg:w-200 lg:top-510 lg:-left-40
         xl:w-220 xl:top-570 xl:-left-30 
-        opacity-30"
+        opacity-30 -z-10"
         >
           <img src="/support.png" alt="tank_hero" />
           <div className="absolute bottom-0 left-0 w-full h-[70%] bg-linear-to-t from-[#060a14] to-transparent" />

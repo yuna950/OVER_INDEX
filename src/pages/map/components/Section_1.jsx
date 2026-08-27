@@ -65,7 +65,7 @@ export default function Section_1({ map }) {
                 <img
                   src={map.screenshot}
                   alt={map.key}
-                  className="h-full object-center"
+                  className="h-full object-center hover:scale-105 transition"
                   onError={(e) => {
                     e.currentTarget.src = NO_IMG;
                   }}

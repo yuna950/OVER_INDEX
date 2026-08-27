@@ -7,6 +7,7 @@ import Map from "./pages/map/Map";
 import HeroDetail from "./pages/hero_detail/HeroDetail";
 import MapDetail from "./pages/map_detail/MapDetail";
 import ErrorPage from "./pages/ErrorPage";
+import Search from "./pages/search/Search";
 
 export default function Router() {
   return (
@@ -21,6 +22,7 @@ export default function Router() {
         <Route path="/map/gamemode/:key" element={<Map />} />
         <Route path="/hero/:key" element={<HeroDetail />} />
         <Route path="/map/:key" element={<MapDetail />} />
+        <Route path="/search" element={<Search />} />
         <Route path="/*" element={<ErrorPage />} />
       </Routes>
       <Footer />

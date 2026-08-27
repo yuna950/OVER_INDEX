@@ -26,6 +26,8 @@ export default function Map() {
     return <Loading />;
   }
 
+  console.log(mapData);
+
   return (
     <div className="min-h-screen">
       <h2 className="text-3xl lg:text-[45px] xl:text-[55px] font-bold text-center mt-12.5 mb-7.5">

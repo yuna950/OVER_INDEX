@@ -54,8 +54,8 @@ export default function Section_2({ detail }) {
                 className={`
                   w-15
                   h-15
-                  lg:w-23
-                  lg:h-23
+                  lg:w-20
+                  lg:h-20
                   flex
                   justify-center
                   items-center

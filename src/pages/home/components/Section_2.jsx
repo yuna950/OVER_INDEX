@@ -92,10 +92,9 @@ export default function Section_2({ position, stats, heroes, color }) {
 
       <Link to={`/hero/role/${position.key}`}>
         <div
-          className={`m-auto w-fit flex gap-2.5 items-center px-4 py-2 rounded-3xl border border-[#E5E7EB] text-[#E5E7EB] hover:border-[${color}] hover:text-[${color}]  transition cursor-pointer`}
+          className={`m-auto w-fit flex gap-2.5 items-center px-4 py-2 rounded-3xl border border-[#E5E7EB] text-[#E5E7EB] hover:border-[${color}] transition cursor-pointer`}
         >
           <p className={`text-[12px] lg:text-[16px]`}>전체보기</p>
-
           <MdOutlineArrowOutward size={15} />
         </div>
       </Link>

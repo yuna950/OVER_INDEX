@@ -8,6 +8,8 @@ export default function Section_1({ position, heroes }) {
     ? heroes?.filter((hero) => hero.role === role)
     : heroes;
 
+  console.log(heroes);
+
   return (
     <div className="w-full m-auto grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4  gap-5 lg:gap-12.5 py-7.5 ">
       {positionHeroes?.map((hero) => {
