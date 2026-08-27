@@ -44,7 +44,7 @@ export default function Section_2({ detail }) {
           }}
         >
           {abilities.map((skill) => (
-            <SwiperSlide key={skill.name} className="!w-auto">
+            <SwiperSlide key={skill.name} className="w-auto!">
               <button
                 type="button"
                 onClick={() => {
@@ -71,7 +71,9 @@ export default function Section_2({ detail }) {
                   }
                 `}
               >
-                <img src={skill.icon} alt={skill.name} className="w-full" />
+                <div className="w-[80%]">
+                  <img src={skill.icon} alt={skill.name} className="w-full" />
+                </div>
               </button>
             </SwiperSlide>
           ))}
