@@ -15,10 +15,13 @@ export default function Section_2({ detail }) {
 
   // 처음 들어왔을 때 첫 번째 스킬 선택
   useEffect(() => {
-    if (abilities.length > 0 && !selectedSkill) {
+    if (abilities.length > 0) {
       setSelectedSkill(abilities[0]);
+      setIsVideoLoading(true);
+    } else {
+      setSelectedSkill(null);
     }
-  }, [abilities, selectedSkill]);
+  }, [detail]);
 
   return (
     <div className="w-full py-25 flex flex-col gap-7.5 justify-center items-center">

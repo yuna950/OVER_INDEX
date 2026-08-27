@@ -6,11 +6,11 @@ import { useScrollTop } from "../../lib/useScrollTop";
 import Loading from "../../components/Loading";
 
 export default function Home() {
-  useScrollTop();
   const [positionData, setPositionData] = useState();
   const [statsData, setStatsData] = useState();
   const [heroData, setHeroData] = useState();
   const [loading, setLoading] = useState(true);
+  useScrollTop();
 
   useEffect(() => {
     (async () => {

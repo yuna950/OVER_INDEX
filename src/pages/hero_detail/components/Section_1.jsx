@@ -1,5 +1,5 @@
 import { FaHeart } from "react-icons/fa";
-import { roleColors, roleName, subroleNames } from "../../../lib/hero";
+import { roleColors, roleName, subroleNames } from "../../api/hero";
 
 export default function Section_1({ detail }) {
   const heart = detail?.hitpoints?.health;
@@ -26,7 +26,10 @@ export default function Section_1({ detail }) {
       <div className="w-[80%] absolute z-10 left-0 bottom-0 px-5 lg:px-10 xl:px-62.5 flex flex-col py-5 gap-2.5 lg:gap-4">
         <div className="flex gap-2.5 text-xs items-center ">
           <div
-            className={`w-fit h-fit rounded-2xl px-3 py-1.5 flex gap-2 items-center bg-[${roleColors[detail?.role]}]`}
+            className="w-fit h-fit rounded-2xl px-3 py-1.5 flex gap-2 items-center"
+            style={{
+              backgroundColor: roleColors[detail?.role],
+            }}
           >
             <div className="w-3.5">
               <img src={`/${detail?.role}.svg`} alt={detail?.role} />
@@ -49,10 +52,18 @@ export default function Section_1({ detail }) {
         </h1>
 
         <ul className="w-[80%] flex flex-col lg:flex-row  gap-2 opacity-40 font-light text-xs lg:text-sm">
-          <li>{detail?.birthday} </li>
-          <li className="hidden lg:block">•</li>
-          <li>{detail?.age}세</li>
-          <li className="hidden lg:block">•</li>
+          {detail.birthday && (
+            <div className="flex gap-2">
+              <li>{detail?.birthday} </li>
+              <li className="hidden lg:block">•</li>
+            </div>
+          )}
+          {detail.age && (
+            <div className="flex gap-2">
+              <li>{detail?.age}세</li>
+              <li className="hidden lg:block">•</li>
+            </div>
+          )}
           <li>{detail?.location}</li>
         </ul>
 

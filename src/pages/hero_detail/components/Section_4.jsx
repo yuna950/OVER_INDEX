@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
-import { getHeroDetail } from "../../api/OverFastApi";
+import { getHeroes } from "../../api/OverFastApi";
 import { Link } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import "swiper/css";
-import { roleColors, subroleNames } from "../../../lib/hero";
+import { roleColors, subroleNames } from "../../api/hero";
 
 export default function Section_4({ data, title }) {
   const [heroes, setHeroes] = useState([]);
@@ -14,20 +14,29 @@ export default function Section_4({ data, title }) {
 
     const fetchHeroes = async () => {
       try {
-        const heroDetails = await Promise.all(
-          data.map((hero) => getHeroDetail(hero.name)),
-        );
+        // 전체 영웅 데이터 가져오기
+        const allHeroes = await getHeroes();
 
-        setHeroes(heroDetails);
+        console.log("data:", data);
+        console.log("allHeroes:", allHeroes);
+
+        // data의 name과 getHeroes의 key가 같은 영웅 찾기
+        const matchedHeroes = data
+          .map((hero) => {
+            return allHeroes.find((item) => item.key === hero.name);
+          })
+          .filter(Boolean);
+
+        console.log("matchedHeroes:", matchedHeroes);
+
+        setHeroes(matchedHeroes);
       } catch (error) {
-        console.error("영웅 상세정보 불러오기 실패:", error);
+        console.error("영웅 정보 불러오기 실패:", error);
       }
     };
 
     fetchHeroes();
   }, [data]);
-
-  console.log(heroes);
 
   return (
     <div className="py-12.5">
@@ -36,7 +45,7 @@ export default function Section_4({ data, title }) {
       </h2>
 
       <Swiper
-        className="w-full lg:w-[80%] h-full overflow-visible! "
+        className="w-full lg:w-[80%] h-full overflow-visible!"
         spaceBetween={10}
         slidesPerView={2.5}
         breakpoints={{
@@ -54,15 +63,15 @@ export default function Section_4({ data, title }) {
           const color = roleColors[hero.role];
 
           return (
-            <SwiperSlide key={hero.name}>
-              <Link to={`/hero/${hero.name}`}>
+            <SwiperSlide key={hero.key}>
+              <Link to={`/hero/${hero.key}`}>
                 <div
                   className="w-full h-fit px-5 py-5 lg:px-7.5 lg:py-7.5 flex flex-col items-center gap-5 lg:gap-10 xl:gap-20 border rounded-[20px] transition"
                   style={{
                     borderColor: `${color}25`,
                   }}
                   onMouseEnter={(e) => {
-                    e.currentTarget.style.borderColor = color / 25;
+                    e.currentTarget.style.borderColor = color;
                     e.currentTarget.style.boxShadow = `0 0 15px ${color}`;
                   }}
                   onMouseLeave={(e) => {

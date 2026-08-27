@@ -1,0 +1,320 @@
+export const maps = [
+  {
+    key: "aatlis",
+    name: "Aatlis",
+    type: "Flashpoint",
+    onPool: true,
+    points: ["Station", "Bazaar", "Resort", "Town Center", "Garden"],
+  },
+  {
+    key: "antarctic-peninsula",
+    name: "Antarctic Peninsula",
+    type: "Control",
+    onPool: true,
+    points: ["Drilling Rig", "Icebreaker", "Anomaly"],
+  },
+  {
+    key: "blizzard-world",
+    name: "Blizzard World",
+    type: "Hybrid",
+    onPool: true,
+    points: ["A", "B", "C"],
+  },
+  {
+    key: "busan",
+    name: "Busan",
+    type: "Control",
+    onPool: true,
+    points: ["Downtown", "Sanctuary", "MEKA Base"],
+  },
+  {
+    key: "circuit-royal",
+    name: "Circuit Royal",
+    type: "Escort",
+    onPool: true,
+    points: ["A", "B", "C"],
+  },
+  {
+    key: "colosseo",
+    name: "Colosseo",
+    type: "Push",
+    onPool: true,
+    points: ["Ally", "Mid", "Enemy"],
+  },
+  {
+    key: "dorado",
+    name: "Dorado",
+    type: "Escort",
+    onPool: true,
+    points: ["A", "B", "C"],
+  },
+  {
+    key: "eichenwalde",
+    name: "Eichenwalde",
+    type: "Hybrid",
+    onPool: true,
+    points: ["A", "B", "C"],
+  },
+  {
+    key: "esperanca",
+    name: "Esperança",
+    type: "Push",
+    onPool: true,
+    points: ["Ally", "Mid", "Enemy"],
+  },
+  {
+    key: "hanamura",
+    name: "Hanamura",
+    type: "Assault",
+    onPool: false,
+    points: ["A", "B"],
+  },
+  {
+    key: "hanaoka",
+    name: "Hanaoka",
+    type: "Clash",
+    onPool: false,
+    points: ["A", "B", "C", "D", "E"],
+  },
+  {
+    key: "havana",
+    name: "Havana",
+    type: "Escort",
+    onPool: true,
+    points: ["A", "B", "C"],
+  },
+  {
+    key: "hollywood",
+    name: "Hollywood",
+    type: "Hybrid",
+    onPool: true,
+    points: ["A", "B", "C"],
+  },
+  {
+    key: "horizon-lunar-colony",
+    name: "Horizon Lunar Colony",
+    type: "Assault",
+    onPool: false,
+    points: ["A", "B"],
+  },
+  {
+    key: "ilios",
+    name: "Ilios",
+    type: "Control",
+    onPool: true,
+    points: ["Lighthouse", "Well", "Ruins"],
+  },
+  {
+    key: "junkertown",
+    name: "Junkertown",
+    type: "Escort",
+    onPool: true,
+    points: ["A", "B", "C"],
+  },
+  {
+    key: "kings-row",
+    name: "King's Row",
+    type: "Hybrid",
+    onPool: true,
+    points: ["A", "B", "C"],
+  },
+  {
+    key: "lijiang-tower",
+    name: "Lijiang Tower",
+    type: "Control",
+    onPool: true,
+    points: ["Night Market", "Garden", "Control Center"],
+  },
+  {
+    key: "midtown",
+    name: "Midtown",
+    type: "Hybrid",
+    onPool: true,
+    points: ["A", "B", "C"],
+  },
+  {
+    key: "neon-junction",
+    name: "Neon Junction",
+    type: "Hybrid",
+    onPool: true,
+    points: ["A", "B", "C"],
+  },
+  {
+    key: "nepal",
+    name: "Nepal",
+    type: "Control",
+    onPool: true,
+    points: ["Village", "Sanctum", "Shrine"],
+  },
+  {
+    key: "new-junk-city",
+    name: "New Junk City",
+    type: "Flashpoint",
+    onPool: true,
+    points: ["Arena", "Ducts", "Refinery", "Junkyard", "Bomb Flats"],
+  },
+  {
+    key: "new-queen-street",
+    name: "New Queen Street",
+    type: "Push",
+    onPool: true,
+    points: ["Ally", "Mid", "Enemy"],
+  },
+  {
+    key: "numbani",
+    name: "Numbani",
+    type: "Hybrid",
+    onPool: true,
+    points: ["A", "B", "C"],
+  },
+  {
+    key: "oasis",
+    name: "Oasis",
+    type: "Control",
+    onPool: true,
+    points: ["City Center", "Gardens", "University"],
+  },
+  {
+    key: "paris",
+    name: "Paris",
+    type: "Assault",
+    onPool: false,
+    points: ["A", "B"],
+  },
+  {
+    key: "paraiso",
+    name: "Paraíso",
+    type: "Hybrid",
+    onPool: true,
+    points: ["A", "B", "C"],
+  },
+  {
+    key: "rialto",
+    name: "Rialto",
+    type: "Escort",
+    onPool: true,
+    points: ["A", "B", "C"],
+  },
+  {
+    key: "route-66",
+    name: "Route 66",
+    type: "Escort",
+    onPool: true,
+    points: ["A", "B", "C"],
+  },
+  {
+    key: "runasapi",
+    name: "Runasapi",
+    type: "Push",
+    onPool: true,
+    points: ["Ally", "Mid", "Enemy"],
+  },
+  {
+    key: "samoa",
+    name: "Samoa",
+    type: "Control",
+    onPool: true,
+    points: ["Beach", "Downtown", "Volcano"],
+  },
+  {
+    key: "shambali-monastery",
+    name: "Shambali Monastery",
+    type: "Escort",
+    onPool: true,
+    points: ["A", "B", "C"],
+  },
+  {
+    key: "suravasa",
+    name: "Suravasa",
+    type: "Flashpoint",
+    onPool: true,
+    points: ["Market", "Gardens", "Palace", "Temple", "Ruins"],
+  },
+  {
+    key: "temple-of-anubis",
+    name: "Temple of Anubis",
+    type: "Assault",
+    onPool: false,
+    points: ["A", "B"],
+  },
+  {
+    key: "throne-of-anubis",
+    name: "Throne of Anubis",
+    type: "Clash",
+    onPool: false,
+    points: ["A", "B", "C", "D", "E"],
+  },
+  {
+    key: "volskaya-industries",
+    name: "Volskaya Industries",
+    type: "Assault",
+    onPool: false,
+    points: ["A", "B"],
+  },
+  {
+    key: "watchpoint-gibraltar",
+    name: "Watchpoint: Gibraltar",
+    type: "Escort",
+    onPool: true,
+    points: ["A", "B", "C"],
+  },
+];
+
+export const pointNames = {
+  // Aatlis
+  Station: "정거장",
+  Bazaar: "시장",
+  Resort: "리조트",
+  "Town Center": "타운 센터",
+  Garden: "정원",
+
+  // Antarctic Peninsula
+  "Drilling Rig": "시추 시설",
+  Icebreaker: "쇄빙선",
+  Anomaly: "이상 현상",
+
+  // Busan
+  Downtown: "번화가",
+  Sanctuary: "성소",
+  "MEKA Base": "MEKA 기지",
+
+  // Colosseo / Push
+  Ally: "아군",
+  Mid: "중앙",
+  Enemy: "적군",
+
+  // Ilios
+  Lighthouse: "등대",
+  Well: "우물",
+  Ruins: "폐허",
+
+  // Lijiang Tower
+  "Night Market": "야시장",
+  "Control Center": "관제 센터",
+
+  // Nepal
+  Village: "마을",
+  Sanctum: "성소",
+  Shrine: "사원",
+
+  // New Junk City
+  Arena: "경기장",
+  Ducts: "배관",
+  Refinery: "정제소",
+  Junkyard: "고철장",
+  "Bomb Flats": "폭탄 평원",
+
+  // Oasis
+  "City Center": "도심",
+  Gardens: "정원",
+  University: "대학교",
+
+  // Samoa
+  Beach: "해변",
+  Volcano: "화산",
+
+  // Suravasa
+  Market: "시장",
+  Palace: "궁전",
+  Temple: "사원",
+};

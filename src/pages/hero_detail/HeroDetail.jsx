@@ -1,18 +1,20 @@
 import { useEffect, useState } from "react";
-import { getHeroDetail, getHeroes } from "../api/OverFastApi";
+import { getHeroDetail, getHeroes, getMaps } from "../api/OverFastApi";
 import { useParams } from "react-router-dom";
 import Section_1 from "./components/Section_1";
 import Section_2 from "./components/Section_2";
 import { useScrollTop } from "../../lib/useScrollTop";
 import Section_3 from "./components/Section_3";
 import Loading from "../../components/Loading";
-import { heroes } from "../../lib/heroes";
+import { heroes } from "../api/heroes";
 import Section_4 from "./components/Section_4";
+import Section_5 from "./components/Section_5";
 
 export default function HeroDetail() {
-  useScrollTop();
   const [detailData, setDetailData] = useState();
   const [loading, setLoading] = useState(true);
+  const [mapData, setMapData] = useState();
+  useScrollTop();
 
   const { key } = useParams();
   const hero = heroes[key];
@@ -20,8 +22,15 @@ export default function HeroDetail() {
   useEffect(() => {
     (async () => {
       try {
+        setLoading(true);
+        setDetailData(null);
+        setMapData(null);
+
         const details = await getHeroDetail(key);
         setDetailData(details);
+
+        const map = await getMaps();
+        setMapData(map);
       } catch (error) {
         console.log(error);
       } finally {
@@ -35,6 +44,7 @@ export default function HeroDetail() {
   }
 
   const perks = detailData?.perks;
+  console.log(hero);
 
   return (
     <div className="min-h-screen">
@@ -47,6 +57,8 @@ export default function HeroDetail() {
         <div className="w-[1px] h-[120px] bg-white/10 m-auto mb-[50px]"></div>
         <Section_4 data={hero?.best_synergies} title={"시너지 영웅"} />
         <Section_4 data={hero?.countered_by} title={"카운터 영웅"} />
+        <Section_5 map={mapData} data={hero?.best_maps} title={"BEST MAP"} />
+        <Section_5 map={mapData} data={hero?.worst_maps} title={"WORST MAP"} />
       </div>
     </div>
   );

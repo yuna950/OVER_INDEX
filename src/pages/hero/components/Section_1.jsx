@@ -1,5 +1,5 @@
 import { Link, useParams } from "react-router-dom";
-import { roleColors, subroleNames } from "../../../lib/hero";
+import { roleColors, subroleNames } from "../../api/hero";
 
 export default function Section_1({ position, heroes }) {
   const { role } = useParams();

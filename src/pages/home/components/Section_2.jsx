@@ -2,7 +2,7 @@ import { MdOutlineArrowOutward } from "react-icons/md";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import { Link } from "react-router-dom";
-import { roleColors, subroleNames } from "../../../lib/hero";
+import { roleColors, subroleNames } from "../../api/hero";
 
 export default function Section_2({ position, stats, heroes, color }) {
   if (!position || !stats || !heroes) return null;

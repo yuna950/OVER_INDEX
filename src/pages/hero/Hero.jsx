@@ -5,9 +5,9 @@ import Section_1 from "./components/Section_1";
 import { useScrollTop } from "../../lib/useScrollTop";
 
 export default function Hero() {
-  useScrollTop();
   const [positionData, setPositionData] = useState();
   const [heroData, setHeroData] = useState();
+  useScrollTop();
 
   const { role } = useParams();
   // role이 없으면 전체 선택
