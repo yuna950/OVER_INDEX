@@ -32,7 +32,7 @@ export default function Hero() {
   return (
     <div className="min-h-screen">
       <h2 className="text-3xl lg:text-[45px] xl:text-[55px] font-bold text-center mt-12.5 mb-7.5">
-        HEROES
+        HERO
       </h2>
 
       <div className="flex text-xs justify-center items-center gap-2.5">

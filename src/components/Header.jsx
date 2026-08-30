@@ -10,10 +10,10 @@ export default function Header() {
       </div>
 
       <ul className="flex gap-12 lg:gap-12.5 text-[16px] lg:text-lg font-semibold">
-        <li className="cursor-pointer">
+        <li className="cursor-pointer hover:text-[#FA9C1D] transition">
           <Link to={"/hero"}>HERO</Link>
         </li>
-        <li className="cursor-pointer">
+        <li className="cursor-pointer hover:text-[#FA9C1D] transition">
           <Link to={"/map"}>MAP</Link>
         </li>
       </ul>

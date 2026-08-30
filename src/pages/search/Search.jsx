@@ -2,13 +2,13 @@ import { useState } from "react";
 import { BiSearch } from "react-icons/bi";
 import { useNavigate, useSearchParams } from "react-router-dom";
 import Results from "./components/Results";
+import { useScrollTop } from "../../lib/useScrollTop";
 
 export default function Search() {
   const [keyword, setKeyword] = useState("");
-
   const navigate = useNavigate();
   const [searchParams] = useSearchParams();
-
+  useScrollTop();
   // URL에 있는 검색어
   const searchKeyword = searchParams.get("keyword") || "";
 

@@ -1,7 +1,7 @@
 export const roleColors = {
   tank: "#1FB8FF",
   damage: "#FF4D4D",
-  support: "#7CFF4D",
+  support: "#4CAF7A",
 };
 
 export const subroleNames = {
