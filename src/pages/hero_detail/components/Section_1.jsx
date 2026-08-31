@@ -1,5 +1,5 @@
 import { FaHeart } from "react-icons/fa";
-import { roleColors, roleName, subroleNames } from "../../api/hero";
+import { roleColors, roleImages, roleName, subroleNames } from "../../api/hero";
 
 export default function Section_1({ detail }) {
   const heart = detail?.hitpoints?.health;
@@ -12,7 +12,7 @@ export default function Section_1({ detail }) {
         <img
           src={detail?.backgrounds?.[2]?.url}
           alt={detail?.name}
-          className="w-full h-full object-cover object-[65%_center] "
+          className="w-full h-full object-cover object-[68%_center] "
         />
 
         <div
@@ -32,7 +32,7 @@ export default function Section_1({ detail }) {
             }}
           >
             <div className="w-3.5">
-              <img src={`/${detail?.role}.svg`} alt={detail?.role} />
+              <img src={roleImages[detail?.role]} alt={detail?.role} />
             </div>
             {roleName[detail?.role]}
           </div>

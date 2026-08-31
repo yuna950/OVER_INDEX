@@ -24,7 +24,11 @@ export default function Map() {
   }, []);
 
   if (loading) {
-    return <Loading />;
+    return (
+      <div className="min-h-screen">
+        <Loading />
+      </div>
+    );
   }
 
   return (

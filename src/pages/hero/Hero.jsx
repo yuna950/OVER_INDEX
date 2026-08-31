@@ -4,10 +4,15 @@ import { Link, useParams } from "react-router-dom";
 import Section_1 from "./components/Section_1";
 import { useScrollTop } from "../../lib/useScrollTop";
 import PageTitle from "../../components/PageTitle";
+import supportIcon from "../../assets/support.svg";
+import damageIcon from "../../assets/damage.svg";
+import tankIcon from "../../assets/tank.svg";
+import Loading from "../../components/Loading";
 
 export default function Hero() {
   const [positionData, setPositionData] = useState();
   const [heroData, setHeroData] = useState();
+  const [loading, setLoading] = useState(true);
   useScrollTop();
 
   const { role } = useParams();
@@ -15,20 +20,34 @@ export default function Hero() {
 
   useEffect(() => {
     (async () => {
-      // 포지션
-      const positions = await getPosition();
-      setPositionData(positions);
+      try {
+        // 포지션
+        const positions = await getPosition();
+        setPositionData(positions);
 
-      // 영웅
-      const heroes = await getHeroes();
-      setHeroData(heroes);
+        // 영웅
+        const heroes = await getHeroes();
+        setHeroData(heroes);
 
-      // 현재 포지션의 영웅만 추출
-      const positionHeroes = heroes?.filter(
-        (hero) => hero.role === positionData?.key,
-      );
+        // 현재 포지션의 영웅만 추출
+        const positionHeroes = heroes?.filter(
+          (hero) => hero.role === positionData?.key,
+        );
+      } catch (error) {
+        console.log(error);
+      } finally {
+        setLoading(false);
+      }
     })();
   }, []);
+
+  if (loading) {
+    return (
+      <div className="min-h-screen">
+        <Loading />
+      </div>
+    );
+  }
   return (
     <div className="min-h-screen">
       <PageTitle title={"HERO"} />
@@ -62,7 +81,7 @@ export default function Hero() {
             `}
           >
             <div className="w-3.5">
-              <img src="/tank.svg" alt="tank" />
+              <img src={tankIcon} alt="tank" />
             </div>
             <p>돌격</p>
           </button>
@@ -79,7 +98,7 @@ export default function Hero() {
             `}
           >
             <div className="w-3.5">
-              <img src="/damage.svg" alt="damage" />
+              <img src={damageIcon} alt="damage" />
             </div>
             <p>공격</p>
           </button>
@@ -96,7 +115,7 @@ export default function Hero() {
             `}
           >
             <div className="w-3.5">
-              <img src="/support.svg" alt="support" />
+              <img src={supportIcon} alt="support" />
             </div>
             <p>지원</p>
           </button>

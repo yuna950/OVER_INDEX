@@ -4,6 +4,16 @@ export const roleColors = {
   support: "#4CAF7A",
 };
 
+import tank from "../../assets/tank.svg";
+import damage from "../../assets/damage.svg";
+import support from "../../assets/support.svg";
+
+export const roleImages = {
+  tank,
+  damage,
+  support,
+};
+
 export const subroleNames = {
   tactician: "전술가",
   flanker: "측면공격가",

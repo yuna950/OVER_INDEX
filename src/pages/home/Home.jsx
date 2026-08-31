@@ -4,6 +4,12 @@ import Section_2 from "./components/Section_2";
 import { getHeroes, getHeroStats, getPosition } from "../api/OverFastApi";
 import { useScrollTop } from "../../lib/useScrollTop";
 import Loading from "../../components/Loading";
+import tankColor from "../../assets/tank_color.svg";
+import damageColor from "../../assets/damage_color.svg";
+import supportColor from "../../assets/support_color.svg";
+import tankImg from "../../assets/tank.png";
+import damageImg from "../../assets/damage.png";
+import supportImg from "../../assets/support.png";
 
 export default function Home() {
   const [positionData, setPositionData] = useState();
@@ -35,7 +41,11 @@ export default function Home() {
   }, []);
 
   if (loading) {
-    return <Loading />;
+    return (
+      <div className="min-h-screen">
+        <Loading />
+      </div>
+    );
   }
 
   return (
@@ -61,14 +71,14 @@ export default function Home() {
         xl:w-200 xl:top-230 xl:-left-60.5 
         opacity-30 -z-10 "
         >
-          <img src="/tank.png" alt="tank_hero" />
+          <img src={tankImg} alt="tank_hero" />
           <div className="absolute bottom-0 left-0 w-full h-[70%] bg-linear-to-t from-[#060a14] to-transparent" />
         </div>
 
         {/* 돌격 */}
         <div className="pt-25 mb-12.5 w-full flex justify-center items-center gap-2.5">
           <div className="w-5 lg:w-6 xl:w-7.5">
-            <img src="/tank_color.svg" alt="돌격" />
+            <img src={tankColor} alt="돌격" />
           </div>
           <h3 className="text-2xl lg:text-[30px] xl:text-[35px] font-bold">
             {positionData?.[0]?.name}
@@ -89,14 +99,14 @@ export default function Home() {
         xl:w-200 xl:top-400 xl:-right-60.5 
         opacity-30 -z-10"
         >
-          <img src="/damage.png" alt="tank_hero" />
+          <img src={damageImg} alt="tank_hero" />
           <div className="absolute bottom-0 left-0 w-full h-[70%] bg-linear-to-t from-[#060a14] to-transparent" />
         </div>
 
         {/* 공격 */}
         <div className="pt-25 mb-12.5 w-full flex justify-center items-center gap-2.5">
           <div className="w-5 lg:w-6 xl:w-7.5">
-            <img src="/damage_color.svg" alt="공격" />
+            <img src={damageColor} alt="공격" />
           </div>
           <h3 className="text-2xl lg:text-[30px] xl:text-[35px] font-bold">
             {positionData?.[1]?.name}
@@ -117,14 +127,14 @@ export default function Home() {
         xl:w-220 xl:top-570 xl:-left-30 
         opacity-30 -z-10"
         >
-          <img src="/support.png" alt="tank_hero" />
+          <img src={supportImg} alt="support_hero" />
           <div className="absolute bottom-0 left-0 w-full h-[70%] bg-linear-to-t from-[#060a14] to-transparent" />
         </div>
 
         {/* 지원 */}
         <div className="pt-25 mb-12.5 w-full flex justify-center items-center gap-2.5">
           <div className="w-5 lg:w-6 xl:w-7.5">
-            <img src="/support_color.svg" alt="지원" />
+            <img src={supportColor} alt="지원" />
           </div>
           <h3 className="text-2xl lg:text-[30px] xl:text-[35px] font-bold">
             {positionData?.[2]?.name}

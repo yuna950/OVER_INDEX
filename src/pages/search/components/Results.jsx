@@ -13,7 +13,7 @@ export default function Results({ data }) {
   const [maps, setMaps] = useState([]);
 
   useEffect(() => {
-    const fetchData = async () => {
+    (async () => {
       try {
         const [heroData, mapData] = await Promise.all([getHeroes(), getMaps()]);
 
@@ -24,13 +24,15 @@ export default function Results({ data }) {
       } finally {
         setLoading(false);
       }
-    };
-
-    fetchData();
+    })();
   }, []);
 
   if (loading) {
-    return <Loading />;
+    return (
+      <div className="w-full min-h-screen">
+        <Loading />
+      </div>
+    );
   }
 
   const keyword = data.toLowerCase();

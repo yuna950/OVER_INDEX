@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { BiSearch } from "react-icons/bi";
 import { useNavigate } from "react-router-dom";
+import mainHero from "../../../assets/main_hero.png";
+import mainBg from "../../../assets/main_bg.png";
 
 export default function Section_1() {
   const [keyword, setKeyword] = useState("");
@@ -17,11 +19,14 @@ export default function Section_1() {
   };
   return (
     <div className="w-full h-112.5 lg:h-125 xl:h-150 overflow-hidden relative">
-      <div className="bg-[url('/main_bg.png')] bg-no-repeat bg-cover  h-full relative">
+      <div
+        className="bg-no-repeat bg-cover bg-center h-full relative"
+        style={{ backgroundImage: `url(${mainBg})` }}
+      >
         <img
-          src="/main_hero.png"
+          src={mainHero}
           alt="hero"
-          className="absolute bottom-13 transform scale-150 lg:scale-100 xl:scale-80 lg:-bottom-25 xl:-bottom-50"
+          className="absolute bottom-13 transform scale-150 lg:scale-100 xl:scale-80 lg:-bottom-25 xl:-bottom-70"
         />
       </div>
 

@@ -37,74 +37,83 @@ export default function MapDetail() {
         const mapInfo = maps.find((item) => item.key === key);
 
         setActivePoint(mapInfo?.points?.[0] ?? null);
-
-        if (!key || !activePoint || !heroData.length) {
-          return;
-        }
-
-        // 현재 맵의 mapHero 데이터
-        const currentMapHero = mapHero[key];
-
-        if (!currentMapHero) {
-          setGoodData([]);
-          setBadData([]);
-          return;
-        }
-
-        // 현재 선택된 포인트 찾기
-        const currentPointData = currentMapHero.find(
-          (item) => item.point === activePoint,
-        );
-
-        if (!currentPointData) {
-          setGoodData([]);
-          setBadData([]);
-          return;
-        }
-
-        // 추천 영웅
-        const good = currentPointData.heroes
-          .filter((item) => item.score >= 10)
-          .map((item) => {
-            const info = heroData.find((hero) => hero.key === item.hero);
-
-            if (!info) return null;
-
-            return {
-              ...info,
-              score: item.score,
-            };
-          })
-          .filter(Boolean);
-
-        // 비추천 영웅
-        const bad = currentPointData.heroes
-          .filter((item) => item.score <= -10)
-          .map((item) => {
-            const info = heroData.find((hero) => hero.key === item.hero);
-
-            if (!info) return null;
-
-            return {
-              ...info,
-              score: item.score,
-            };
-          })
-          .filter(Boolean);
-
-        setGoodData(good);
-        setBadData(bad);
       } catch (error) {
         console.log(error);
       } finally {
         setLoading(false);
       }
     })();
+  }, [key]);
+
+  // 현재 맵 + 현재 포인트의 영웅 데이터
+  useEffect(() => {
+    try {
+      if (!key || !activePoint || !heroData.length) {
+        return;
+      }
+
+      // 현재 맵의 mapHero 데이터
+      const currentMapHero = mapHero[key];
+
+      if (!currentMapHero) {
+        setGoodData([]);
+        setBadData([]);
+        return;
+      }
+
+      // 현재 선택된 포인트 찾기
+      const currentPointData = currentMapHero.find(
+        (item) => item.point === activePoint,
+      );
+
+      if (!currentPointData) {
+        setGoodData([]);
+        setBadData([]);
+        return;
+      }
+
+      // 추천 영웅
+      const good = currentPointData.heroes
+        .filter((item) => item.score >= 10)
+        .map((item) => {
+          const info = heroData.find((hero) => hero.key === item.hero);
+
+          if (!info) return null;
+
+          return {
+            ...info,
+            score: item.score,
+          };
+        })
+        .filter(Boolean);
+
+      // 비추천 영웅
+      const bad = currentPointData.heroes
+        .filter((item) => item.score <= -10)
+        .map((item) => {
+          const info = heroData.find((hero) => hero.key === item.hero);
+
+          if (!info) return null;
+
+          return {
+            ...info,
+            score: item.score,
+          };
+        })
+        .filter(Boolean);
+
+      setGoodData(good);
+      setBadData(bad);
+    } catch (error) {
+      console.log(error);
+    } finally {
+      setLoading(false);
+    }
   }, [key, activePoint, heroData]);
 
   if (loading) {
     return (
-      <div>
+      <div className="min-h-screen">
         <Loading />
       </div>
     );

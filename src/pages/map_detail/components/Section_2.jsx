@@ -3,6 +3,9 @@ import { Link } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import { roleColors, subroleNames } from "../../api/hero";
+import tankIcon from "../../../assets/tank.svg";
+import damageIcon from "../../../assets/damage.svg";
+import supportIcon from "../../../assets/support.svg";
 
 export default function Section_2({ data, title }) {
   const [selectedRole, setSelectedRole] = useState("tank");
@@ -25,7 +28,7 @@ export default function Section_2({ data, title }) {
       </h2>
 
       {/* 영웅 카드 영역 */}
-      <div className="overflow-hidden p-3">
+      <div className="">
         {filteredHeroes?.length > 0 ? (
           <div>
             {/* 역할 태그 */}
@@ -37,7 +40,7 @@ export default function Section_2({ data, title }) {
                 style={roleButtonStyle("tank")}
               >
                 <div className="w-3.5">
-                  <img src="/tank.svg" alt="tank" />
+                  <img src={tankIcon} alt="tank" />
                 </div>
 
                 <p>돌격</p>
@@ -50,7 +53,7 @@ export default function Section_2({ data, title }) {
                 style={roleButtonStyle("damage")}
               >
                 <div className="w-3.5">
-                  <img src="/damage.svg" alt="damage" />
+                  <img src={damageIcon} alt="damage" />
                 </div>
 
                 <p>공격</p>
@@ -63,7 +66,7 @@ export default function Section_2({ data, title }) {
                 style={roleButtonStyle("support")}
               >
                 <div className="w-3.5">
-                  <img src="/support.svg" alt="support" />
+                  <img src={supportIcon} alt="support" />
                 </div>
 
                 <p>지원</p>

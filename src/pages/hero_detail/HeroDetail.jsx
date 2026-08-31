@@ -41,13 +41,17 @@ export default function HeroDetail() {
   }, [key]);
 
   if (loading) {
-    return <Loading />;
+    return (
+      <div className="min-h-screen">
+        <Loading />
+      </div>
+    );
   }
 
   const perks = detailData?.perks;
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen overflow-hidden">
       <PageTitle title={detailData.name} />
       <Section_1 detail={detailData} />
 

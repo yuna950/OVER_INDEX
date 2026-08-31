@@ -38,11 +38,11 @@ export default function Section_4({ data, title }) {
         {title}
       </h2>
 
-      <div className="p-2.5 overflow-hidden">
+      <div className="p-2.5">
         <Swiper
           className="w-full lg:w-[80%] h-full overflow-visible!"
           spaceBetween={10}
-          slidesPerView={2.5}
+          slidesPerView={2.3}
           breakpoints={{
             768: {
               slidesPerView: 3,
