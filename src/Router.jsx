@@ -17,10 +17,9 @@ export default function Router() {
         <Route path="/" element={<Home />} />
         <Route path="/hero" element={<Hero />} />
         <Route path="/hero/role/:role" element={<Hero />} />
-        <Route path="/hero" element={<Hero />} />
+        <Route path="/hero/:key" element={<HeroDetail />} />
         <Route path="/map" element={<Map />} />
         <Route path="/map/gamemode/:key" element={<Map />} />
-        <Route path="/hero/:key" element={<HeroDetail />} />
         <Route path="/map/:key" element={<MapDetail />} />
         <Route path="/search" element={<Search />} />
         <Route path="/*" element={<ErrorPage />} />

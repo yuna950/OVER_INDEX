@@ -1,9 +1,6 @@
 import { useEffect, useState } from "react";
-
 import { Swiper, SwiperSlide } from "swiper/react";
-
 import "swiper/css";
-
 import Loading from "../../../components/Loading";
 
 export default function Section_2({ detail }) {
@@ -24,7 +21,7 @@ export default function Section_2({ detail }) {
   }, [detail]);
 
   return (
-    <div className="w-full py-25 flex flex-col gap-7.5 justify-center items-center">
+    <div className="w-full py-10 lg:py-25 flex flex-col gap-7.5 justify-center items-center">
       <h2 className="text-2xl lg:text-[40px] font-bold">스킬</h2>
 
       {/* 스킬 아이콘 */}
@@ -85,7 +82,7 @@ export default function Section_2({ detail }) {
         <div>
           <div className="relative w-full aspect-video">
             {isVideoLoading && (
-              <div className="absolute inset-0 flex items-center justify-center">
+              <div className="absolute w-full inset-0 flex items-center justify-center">
                 <Loading />
               </div>
             )}
@@ -98,7 +95,7 @@ export default function Section_2({ detail }) {
               playsInline
               poster={selectedSkill.video.thumbnail}
               onCanPlay={() => setIsVideoLoading(false)}
-              className={`w-full h-full transition-opacity duration-300 ${
+              className={`w-full h-full transition ${
                 isVideoLoading ? "opacity-0" : "opacity-100"
               }`}
             >

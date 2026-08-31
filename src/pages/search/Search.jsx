@@ -3,13 +3,15 @@ import { BiSearch } from "react-icons/bi";
 import { useNavigate, useSearchParams } from "react-router-dom";
 import Results from "./components/Results";
 import { useScrollTop } from "../../lib/useScrollTop";
+import Loading from "../../components/Loading";
+import PageTitle from "../../components/PageTitle";
 
 export default function Search() {
   const [keyword, setKeyword] = useState("");
   const navigate = useNavigate();
   const [searchParams] = useSearchParams();
   useScrollTop();
-  // URL에 있는 검색어
+
   const searchKeyword = searchParams.get("keyword") || "";
 
   const handleSubmit = (e) => {
@@ -24,6 +26,7 @@ export default function Search() {
 
   return (
     <div className="mx-5 lg:mx-10 xl:mx-62.5 py-7.5">
+      <PageTitle title={"SEARCH"} />
       <form
         onSubmit={handleSubmit}
         className="flex justify-between w-full relative bg-white/10 rounded-[20px] border-2 border-[#FA9C1D] backdrop-blur-xs"

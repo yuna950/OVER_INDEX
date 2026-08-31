@@ -84,7 +84,7 @@ export default function Home() {
         {/* 공격영웅 */}
         <div
           className="absolute 
-        w-95 top-330 -right-30 
+        w-95 top-320 -right-30 
         lg:w-165 lg:top-350 lg:-right-50
         xl:w-200 xl:top-400 xl:-right-60.5 
         opacity-30 -z-10"
@@ -112,7 +112,7 @@ export default function Home() {
         {/* 지원영웅 */}
         <div
           className="absolute 
-        w-180 top-470 -left-65
+        w-180 top-450 -left-65
         lg:w-200 lg:top-510 lg:-left-40
         xl:w-220 xl:top-570 xl:-left-30 
         opacity-30 -z-10"

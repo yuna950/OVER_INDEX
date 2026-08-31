@@ -22,10 +22,10 @@ export default function Section_5({ title, map, data }) {
                   onError={(e) => {
                     e.currentTarget.src = NO_IMG;
                   }}
-                  className="h-full object-center"
+                  className="h-full object-center hover:scale-105 transition"
                 />
               </div>
-              <p className="text-center text-xl font-semibold py-2.5">
+              <p className="text-center text-lg font-semibold py-2.5">
                 {mapName[map?.key]}
               </p>
             </div>

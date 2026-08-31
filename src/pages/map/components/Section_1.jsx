@@ -14,7 +14,7 @@ export default function Section_1({ map }) {
       : map.filter((item) => item.gamemodes?.includes(selectedType));
 
   return (
-    <div className="w-full">
+    <div className="w-full ">
       <Swiper
         slidesPerView="auto"
         spaceBetween={10}
@@ -23,7 +23,7 @@ export default function Section_1({ map }) {
             spaceBetween: 8,
           },
         }}
-        className="w-fit"
+        className="lg:w-fit overflow-hidden"
       >
         <SwiperSlide className="w-fit!">
           <Link to={"/map"}>
@@ -72,7 +72,7 @@ export default function Section_1({ map }) {
                 />
               </div>
 
-              <p className="text-center text-xl lg:text-2xl xl:text-xl font-semibold py-2.5">
+              <p className="text-center text-lg lg:text-2xl xl:text-xl font-semibold py-2.5">
                 {mapName[map.key]}
               </p>
             </div>

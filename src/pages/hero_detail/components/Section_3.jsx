@@ -1,6 +1,6 @@
 export default function Section_3({ detail }) {
   return (
-    <div className="flex flex-col lg:flex-row items-center justify-center py-[100px]">
+    <div className="flex flex-col lg:flex-row items-center justify-center lg:py-[100px] py-10">
       <div className=" flex flex-col lg:flex-row gap-10">
         <div className="lg:w-[48%] flex flex-col gap-10">
           <h2 className="text-2xl lg:text-3xl font-bold text-center mb-5">
@@ -10,14 +10,14 @@ export default function Section_3({ detail }) {
             {detail?.minor.map((perk) => (
               <div
                 key={perk.name}
-                className="w-[48%] flex flex-col items-center justify-center gap-5"
+                className="w-[50%] flex flex-col items-center justify-center gap-5"
               >
                 <div className="w-18 lg:w-25 px-5 py-5 rounded-[50%] border border-gray-400">
                   <img src={perk.icon} alt={perk.name} />
                 </div>
 
                 <p className="text-lg lg:text-2xl">{perk.name}</p>
-                <p className="text-xs lg:text-sm opacity-50 w-[60%] text-center">
+                <p className="text-xs lg:text-sm opacity-50 w-[80%] text-center">
                   {perk.description}
                 </p>
               </div>
@@ -35,14 +35,14 @@ export default function Section_3({ detail }) {
             {detail?.major.map((perk) => (
               <div
                 key={perk.name}
-                className="w-[48%] flex flex-col items-center justify-center gap-5"
+                className="w-[50%] flex flex-col items-center justify-center gap-5"
               >
                 <div className="w-18 lg:w-25 px-5 py-5 rounded-[50%] border border-gray-400">
                   <img src={perk.icon} alt={perk.name} />
                 </div>
 
                 <p className="text-lg lg:text-2xl ">{perk.name}</p>
-                <p className="text-xs lg:text-sm opacity-50 w-[60%] text-center">
+                <p className="text-xs lg:text-sm opacity-50 w-[80%] text-center">
                   {perk.description}
                 </p>
               </div>

@@ -3,10 +3,12 @@ import { getHeroes, getMaps } from "../../api/OverFastApi";
 import { mapName } from "../../api/mapType";
 import { roleColors, subroleNames } from "../../api/hero";
 import { Link } from "react-router-dom";
+import Loading from "../../../components/Loading";
 
 const NO_IMG = "/no_img.png";
 
 export default function Results({ data }) {
+  const [loading, setLoading] = useState(true);
   const [heroes, setHeroes] = useState([]);
   const [maps, setMaps] = useState([]);
 
@@ -19,11 +21,17 @@ export default function Results({ data }) {
         setMaps(mapData);
       } catch (error) {
         console.log(error);
+      } finally {
+        setLoading(false);
       }
     };
 
     fetchData();
   }, []);
+
+  if (loading) {
+    return <Loading />;
+  }
 
   const keyword = data.toLowerCase();
 

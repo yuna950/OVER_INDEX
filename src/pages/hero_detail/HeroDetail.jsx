@@ -9,6 +9,7 @@ import Loading from "../../components/Loading";
 import { heroes } from "../api/heroes";
 import Section_4 from "./components/Section_4";
 import Section_5 from "./components/Section_5";
+import PageTitle from "../../components/PageTitle";
 
 export default function HeroDetail() {
   const [detailData, setDetailData] = useState();
@@ -44,17 +45,17 @@ export default function HeroDetail() {
   }
 
   const perks = detailData?.perks;
-  console.log(hero);
 
   return (
     <div className="min-h-screen">
+      <PageTitle title={detailData.name} />
       <Section_1 detail={detailData} />
 
       <div className="px-5 lg:px-10 xl:px-62.5">
         <Section_2 detail={detailData} />
         <div className="w-[1px] h-[120px] bg-white/10 m-auto"></div>
         <Section_3 detail={perks} />
-        <div className="w-[1px] h-[120px] bg-white/10 m-auto mb-[50px]"></div>
+        <div className="w-[1px] h-[120px] bg-white/10 m-auto lg:mb-[50px]"></div>
         <Section_4 data={hero?.best_synergies} title={"시너지 영웅"} />
         <Section_4 data={hero?.countered_by} title={"카운터 영웅"} />
         <Section_5 map={mapData} data={hero?.best_maps} title={"BEST MAP"} />

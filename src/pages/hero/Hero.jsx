@@ -3,6 +3,7 @@ import { getHeroes, getPosition } from "../api/OverFastApi";
 import { Link, useParams } from "react-router-dom";
 import Section_1 from "./components/Section_1";
 import { useScrollTop } from "../../lib/useScrollTop";
+import PageTitle from "../../components/PageTitle";
 
 export default function Hero() {
   const [positionData, setPositionData] = useState();
@@ -10,7 +11,6 @@ export default function Hero() {
   useScrollTop();
 
   const { role } = useParams();
-  // role이 없으면 전체 선택
   const selectedRole = role || "all";
 
   useEffect(() => {
@@ -31,6 +31,7 @@ export default function Hero() {
   }, []);
   return (
     <div className="min-h-screen">
+      <PageTitle title={"HERO"} />
       <h2 className="text-3xl lg:text-[45px] xl:text-[55px] font-bold text-center mt-12.5 mb-7.5">
         HERO
       </h2>
@@ -38,7 +39,7 @@ export default function Hero() {
       <div className="flex text-xs justify-center items-center gap-2.5">
         <Link to={"/hero"}>
           <button
-            className={`px-3 py-2 flex justify-center items-center rounded-3xl border transition-colors duration-200
+            className={`px-3 py-2 flex justify-center items-center rounded-3xl border transition 
               ${
                 selectedRole === "all"
                   ? "border-[#FA9C1D] bg-[#FA9C1D] text-white"
@@ -52,7 +53,7 @@ export default function Hero() {
 
         <Link to={`/hero/role/${positionData?.[0]?.key}`}>
           <button
-            className={`px-3 py-2 flex justify-center items-center gap-2.5 rounded-3xl border transition-colors duration-200
+            className={`px-3 py-2 flex justify-center items-center gap-2.5 rounded-3xl border transition
               ${
                 selectedRole === "tank"
                   ? "border-[#1FB8FF] bg-[#1FB8FF] text-white"
@@ -69,7 +70,7 @@ export default function Hero() {
 
         <Link to={`/hero/role/${positionData?.[1]?.key}`}>
           <button
-            className={`px-3 py-2 flex justify-center items-center gap-2.5 rounded-3xl border transition-colors duration-200
+            className={`px-3 py-2 flex justify-center items-center gap-2.5 rounded-3xl border transition
               ${
                 selectedRole === "damage"
                   ? "border-[#E53935] bg-[#E53935] text-white"
@@ -86,7 +87,7 @@ export default function Hero() {
 
         <Link to={`/hero/role/${positionData?.[2]?.key}`}>
           <button
-            className={`px-3 py-2 flex justify-center items-center gap-2.5 rounded-3xl border transition-colors duration-200
+            className={`px-3 py-2 flex justify-center items-center gap-2.5 rounded-3xl border transition
               ${
                 selectedRole === "support"
                   ? "border-[#4CAF7A] bg-[#4CAF7A] text-white"

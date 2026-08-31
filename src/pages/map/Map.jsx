@@ -3,6 +3,7 @@ import { useScrollTop } from "../../lib/useScrollTop";
 import { getMaps } from "../api/OverFastApi";
 import Loading from "../../components/Loading";
 import Section_1 from "./components/Section_1";
+import PageTitle from "../../components/PageTitle";
 
 export default function Map() {
   const [loading, setLoading] = useState(true);
@@ -26,10 +27,9 @@ export default function Map() {
     return <Loading />;
   }
 
-  console.log(mapData);
-
   return (
     <div className="min-h-screen">
+      <PageTitle title={"MAP"} />
       <h2 className="text-3xl lg:text-[45px] xl:text-[55px] font-bold text-center mt-12.5 mb-7.5">
         MAP
       </h2>

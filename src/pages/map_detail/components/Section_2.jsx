@@ -20,12 +20,12 @@ export default function Section_2({ data, title }) {
   return (
     <div className="py-10">
       {/* 타이틀 */}
-      <h2 className="text-2xl lg:text-[40px] font-bold text-center mb-7.5 lg:mb-10">
+      <h2 className="text-xl lg:text-[40px] font-bold text-center mb-7.5 lg:mb-10">
         {title}
       </h2>
 
       {/* 영웅 카드 영역 */}
-      <div className="overflow-hidden p-5">
+      <div className="overflow-hidden p-3">
         {filteredHeroes?.length > 0 ? (
           <div>
             {/* 역할 태그 */}
@@ -72,7 +72,7 @@ export default function Section_2({ data, title }) {
             <Swiper
               className="w-full h-full overflow-visible!"
               spaceBetween={10}
-              slidesPerView={2.5}
+              slidesPerView={2.3}
               breakpoints={{
                 768: {
                   slidesPerView: 3.5,

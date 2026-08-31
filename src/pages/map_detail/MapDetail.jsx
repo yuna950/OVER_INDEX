@@ -8,6 +8,8 @@ import MapPoints from "./components/MapPoints";
 import Section_2 from "./components/Section_2";
 import { mapHero } from "../api/mapHero";
 import { maps } from "../api/mapPoints";
+import { NO_IMG } from "../../constant/img";
+import PageTitle from "../../components/PageTitle";
 
 export default function MapDetail() {
   const [mapData, setMapData] = useState();
@@ -16,7 +18,6 @@ export default function MapDetail() {
   const [goodData, setGoodData] = useState([]);
   const [badData, setBadData] = useState([]);
   const [activePoint, setActivePoint] = useState(null);
-
   useScrollTop();
 
   const { key } = useParams();
@@ -36,72 +37,69 @@ export default function MapDetail() {
         const mapInfo = maps.find((item) => item.key === key);
 
         setActivePoint(mapInfo?.points?.[0] ?? null);
+
+        if (!key || !activePoint || !heroData.length) {
+          return;
+        }
+
+        // 현재 맵의 mapHero 데이터
+        const currentMapHero = mapHero[key];
+
+        if (!currentMapHero) {
+          setGoodData([]);
+          setBadData([]);
+          return;
+        }
+
+        // 현재 선택된 포인트 찾기
+        const currentPointData = currentMapHero.find(
+          (item) => item.point === activePoint,
+        );
+
+        if (!currentPointData) {
+          setGoodData([]);
+          setBadData([]);
+          return;
+        }
+
+        // 추천 영웅
+        const good = currentPointData.heroes
+          .filter((item) => item.score >= 10)
+          .map((item) => {
+            const info = heroData.find((hero) => hero.key === item.hero);
+
+            if (!info) return null;
+
+            return {
+              ...info,
+              score: item.score,
+            };
+          })
+          .filter(Boolean);
+
+        // 비추천 영웅
+        const bad = currentPointData.heroes
+          .filter((item) => item.score <= -10)
+          .map((item) => {
+            const info = heroData.find((hero) => hero.key === item.hero);
+
+            if (!info) return null;
+
+            return {
+              ...info,
+              score: item.score,
+            };
+          })
+          .filter(Boolean);
+
+        setGoodData(good);
+        setBadData(bad);
       } catch (error) {
         console.log(error);
       } finally {
         setLoading(false);
       }
     })();
-  }, [key]);
-
-  // 현재 맵 + 현재 포인트의 영웅 데이터
-  useEffect(() => {
-    if (!key || !activePoint || !heroData.length) {
-      return;
-    }
-
-    // 현재 맵의 mapHero 데이터
-    const currentMapHero = mapHero[key];
-
-    if (!currentMapHero) {
-      setGoodData([]);
-      setBadData([]);
-      return;
-    }
-
-    // 현재 선택된 포인트 찾기
-    const currentPointData = currentMapHero.find(
-      (item) => item.point === activePoint,
-    );
-
-    if (!currentPointData) {
-      setGoodData([]);
-      setBadData([]);
-      return;
-    }
-
-    // 추천 영웅
-    const good = currentPointData.heroes
-      .filter((item) => item.score >= 10)
-      .map((item) => {
-        const info = heroData.find((hero) => hero.key === item.hero);
-
-        if (!info) return null;
-
-        return {
-          ...info,
-          score: item.score,
-        };
-      })
-      .filter(Boolean);
-
-    // 비추천 영웅
-    const bad = currentPointData.heroes
-      .filter((item) => item.score <= -10)
-      .map((item) => {
-        const info = heroData.find((hero) => hero.key === item.hero);
-
-        if (!info) return null;
-
-        return {
-          ...info,
-          score: item.score,
-        };
-      })
-      .filter(Boolean);
-
-    setGoodData(good);
-    setBadData(bad);
   }, [key, activePoint, heroData]);
 
   if (loading) {
@@ -114,6 +112,7 @@ export default function MapDetail() {
 
   return (
     <div className="px-5 lg:px-10 xl:px-62.5 overflow-hidden">
+      <PageTitle title={mapName[mapData?.key]} />
       <div className="flex flex-col items-center justify-center gap-5 lg:items-start">
         {/* 맵 이미지 */}
         <div className="w-full aspect-2/1 bg-gray-300 rounded-2xl overflow-hidden">
@@ -121,6 +120,9 @@ export default function MapDetail() {
             src={mapData?.screenshot}
             alt={mapData?.key}
             className="w-full h-full object-cover"
+            onError={(e) => {
+              e.currentTarget.src = NO_IMG;
+            }}
           />
         </div>
 
