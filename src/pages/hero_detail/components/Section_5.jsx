@@ -15,7 +15,7 @@ export default function Section_5({ title, map, data }) {
         {filterMap?.map((map) => (
           <Link to={`/map/${map.key}`} key={map.key}>
             <div>
-              <div className="w-full aspect-2/1 bg-gray-200 rounded-[20px] overflow-hidden">
+              <div className="w-full aspect-2/1  rounded-[20px] overflow-hidden">
                 <img
                   src={map.screenshot}
                   alt={map.key}

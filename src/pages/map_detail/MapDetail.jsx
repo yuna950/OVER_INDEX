@@ -124,7 +124,7 @@ export default function MapDetail() {
       <PageTitle title={mapName[mapData?.key]} />
       <div className="flex flex-col items-center justify-center gap-5 lg:items-start">
         {/* 맵 이미지 */}
-        <div className="w-full aspect-2/1 bg-gray-300 rounded-2xl overflow-hidden">
+        <div className="w-full aspect-2/1  rounded-2xl overflow-hidden">
           <img
             src={mapData?.screenshot}
             alt={mapData?.key}

@@ -145,7 +145,7 @@ export default function Results({ data }) {
                 {mapResults.map((map) => (
                   <Link key={map.key} to={`/map/${map.key}`}>
                     <div className="w-full">
-                      <div className="w-full aspect-2/1 rounded-[20px] bg-gray-400 overflow-hidden">
+                      <div className="w-full aspect-2/1 rounded-[20px]  overflow-hidden">
                         <img
                           src={map.screenshot}
                           alt={map.key}
